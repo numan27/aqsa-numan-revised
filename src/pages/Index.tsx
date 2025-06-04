@@ -1,12 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import Benefits from '@/components/Benefits';
+import Services from '@/components/Services';
+import Testimonials from '@/components/Testimonials';
+import Ventures from '@/components/Ventures';
+import Community from '@/components/Community';
+import JobBoard from '@/components/JobBoard';
+import Events from '@/components/Events';
+import Speaking from '@/components/Speaking';
+import Podcasts from '@/components/Podcasts';
+import Blog from '@/components/Blog';
+import Articles from '@/components/Articles';
+import Newsletter from '@/components/Newsletter';
+import CallToAction from '@/components/CallToAction';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Navigation />
+      <Hero />
+      <Benefits />
+      <Services />
+      <Testimonials />
+      <Ventures />
+      <Community />
+      <JobBoard />
+      <Events />
+      <Speaking />
+      <Podcasts />
+      <Blog />
+      <Articles />
+      <Newsletter />
+      <CallToAction />
+      <Footer />
     </div>
   );
 };
