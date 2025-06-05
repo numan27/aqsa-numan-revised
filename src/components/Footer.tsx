@@ -1,68 +1,73 @@
-
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import Logo from "./Logo";
 
 const Footer = () => {
   const footerLinks = {
-    "Services": [
+    Services: [
       { name: "UI/UX Design", href: "/services" },
-      { name: "Career Mentorship", href: "/services" }, 
+      { name: "Career Mentorship", href: "/services" },
       { name: "Job Placement", href: "/services" },
-      { name: "B2B Collaboration", href: "/services" }
+      { name: "B2B Collaboration", href: "/services" },
     ],
-    "Company": [
+    Company: [
       { name: "About", href: "/about" },
       { name: "Portfolio", href: "/portfolio" },
       { name: "Services", href: "/services" },
-      { name: "Contact", href: "/contact" }
+      { name: "Contact", href: "/contact" },
     ],
-    "Resources": [
-      { name: "Blog", href: "/" }, 
+    Resources: [
+      { name: "Blog", href: "/" },
       { name: "Articles", href: "/" },
       { name: "Speaking", href: "/" },
-      { name: "Podcasts", href: "/" }
-    ]
+      { name: "Podcasts", href: "/" },
+    ],
   };
 
   const socialLinks = [
-    { name: "LinkedIn", href: "#" },
-    { name: "Twitter", href: "#" },
-    { name: "Behance", href: "#" },
-    { name: "Instagram", href: "#" }
+    { name: "LinkedIn", href: "#", icon: Linkedin },
+    { name: "Twitter", href: "#", icon: Twitter },
+    { name: "Instagram", href: "#", icon: Instagram },
+    { name: "Email", href: "mailto:contact@aqsanuman.com", icon: Mail },
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="md:col-span-1">
-            <Link to="/" className="text-2xl font-display font-bold text-purple-400 mb-4 block hover:text-purple-300 transition-colors">
-              Aqsa Numan
-            </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              UI/UX Designer, Community Builder, and Mother of 3. Designing with purpose, 
-              leading with passion, inspiring through motherhood.
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+          {/* Brand Section */}
+          <div className="lg:col-span-2">
+            <Logo variant="footer" />
+            <p className="mt-6 text-gray-300 leading-relaxed">
+              UI/UX Designer, Community Builder, and Mother of 3. Designing with
+              purpose, leading with passion, inspiring through motherhood.
             </p>
-            <div className="flex space-x-4">
+            <div className="mt-8 flex space-x-4">
               {socialLinks.map((link) => (
-                <a 
+                <a
                   key={link.name}
-                  href={link.href} 
-                  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                  href={link.href}
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-gray-700 transition-all duration-200"
+                  aria-label={link.name}
                 >
-                  {link.name}
+                  <link.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
-          
+
+          {/* Links Sections */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-lg font-semibold mb-4 text-white">{category}</h4>
-              <ul className="space-y-2">
+              <h4 className="text-lg font-semibold mb-6 text-white">
+                {category}
+              </h4>
+              <ul className="space-y-4">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <Link 
-                      to={link.href} 
+                    <Link
+                      to={link.href}
                       className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
                     >
                       {link.name}
@@ -73,20 +78,32 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Aqsa Numan. All rights reserved.
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} Aqsa Numan. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200">
+            <div className="flex flex-wrap justify-center gap-6">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200"
+              >
                 Cookie Policy
               </a>
             </div>
