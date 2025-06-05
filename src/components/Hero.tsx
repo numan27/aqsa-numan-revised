@@ -111,22 +111,20 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Visual Element */}
+          {/* Right Column - Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative block order-1 lg:order-2 mb-8 lg:mb-0"
+            className="relative order-1 lg:order-2"
           >
-            <div className="relative w-full aspect-[4/3] md:aspect-[3/4] lg:aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-3"></div>
-              <div className="absolute inset-0 bg-white rounded-3xl shadow-2xl transform -rotate-3 overflow-hidden">
-                <img
-                  src="/aqsa-hero.png"
-                  alt="Hero illustration"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/author-img-2.jpeg"
+                alt="Aqsa Numan - UI/UX Designer & Community Builder"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
           </motion.div>
         </div>
