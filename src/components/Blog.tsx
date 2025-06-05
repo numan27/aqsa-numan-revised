@@ -18,6 +18,15 @@ const Blog = () => {
       category: "Leadership",
       image: "photo-1500673922987-e212871fec22",
     },
+    {
+      title: "The Future of UI/UX Design",
+      excerpt:
+        "Exploring emerging trends and technologies shaping the future of user interface design.",
+      date: "February 1, 2024",
+      readTime: "7 min read",
+      category: "Design",
+      image: "photo-1518770660439-4636190af475",
+    },
   ];
 
   return (

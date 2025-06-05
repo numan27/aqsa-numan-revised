@@ -7,6 +7,20 @@ const Speaking = () => {
       description:
         "Building authentic communities that drive real business value",
     },
+    {
+      title: "UI/UX Design Fundamentals",
+      event: "Design Week Pakistan",
+      audience: "150+ Attendees",
+      description:
+        "Essential principles and practices for creating effective user interfaces",
+    },
+    {
+      title: "Tech Career Navigation",
+      event: "Tech Career Summit",
+      audience: "300+ Attendees",
+      description:
+        "Strategies for building and advancing your career in the tech industry",
+    },
   ];
 
   return (

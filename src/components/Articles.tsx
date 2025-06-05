@@ -14,6 +14,13 @@ const Articles = () => {
       description:
         "Using design methodologies to solve complex social challenges.",
     },
+    {
+      title: "Building Inclusive Design Systems",
+      publication: "Design Week",
+      date: "December 2023",
+      description:
+        "Creating design systems that work for everyone, regardless of ability or background.",
+    },
   ];
 
   return (

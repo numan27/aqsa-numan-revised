@@ -14,6 +14,13 @@ const Ventures = () => {
       status: "Beta Testing",
       image: "photo-1486312338219-ce68d2c6f44d",
     },
+    {
+      title: "Design Community Hub",
+      description:
+        "A comprehensive platform for designers to connect, learn, and grow through workshops, mentorship, and collaborative projects.",
+      status: "Planning Phase",
+      image: "photo-1500673922987-e212871fec22",
+    },
   ];
 
   return (

@@ -14,6 +14,7 @@ import Articles from "@/components/Articles";
 import Newsletter from "@/components/Newsletter";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const Index = () => {
   return (
@@ -87,6 +88,7 @@ const Index = () => {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   );
 };
