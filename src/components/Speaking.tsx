@@ -124,7 +124,7 @@ const Speaking = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center">
+        <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Book Me for Your Event
           </h3>
