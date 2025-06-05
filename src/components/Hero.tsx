@@ -35,7 +35,7 @@ const Hero = () => {
             >
               <span className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-600 rounded-full text-sm font-medium shadow-sm font-body">
                 <span className="w-2 h-2 bg-purple-600 rounded-full mr-2 animate-pulse"></span>
-                UI/UX Designer • Community Builder • Mother of 3
+                UI/UX Designer • Community Builder
               </span>
             </motion.div>
 
@@ -57,9 +57,9 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 md:mb-10 leading-relaxed max-w-2xl font-body"
             >
-              Leading with Passion. Inspiring through Motherhood. I help working
-              moms, designers, and tech professionals thrive by blending
-              creativity, community, and compassion.
+              Leading with Passion. Inspiring through Design. I help designers
+              and tech professionals thrive by blending creativity, community,
+              and compassion.
             </motion.p>
 
             <motion.div

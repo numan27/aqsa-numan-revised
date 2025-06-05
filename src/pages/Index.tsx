@@ -20,12 +20,9 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
       <Hero />
 
-      {/* Main Content Sections */}
       <main className="relative">
-        {/* Services & Benefits */}
         <section className="relative py-20 md:py-32 bg-gradient-to-b from-white to-purple-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Benefits />
@@ -49,9 +46,9 @@ const Index = () => {
         <section className="relative py-20 md:py-32 bg-gradient-to-b from-white to-pink-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Testimonials />
-            <div className="mt-20 md:mt-32">
+            {/* <div className="mt-20 md:mt-32">
               <JobBoard />
-            </div>
+            </div> */}
           </div>
         </section>
 
