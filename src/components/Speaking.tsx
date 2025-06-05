@@ -42,46 +42,49 @@ const Speaking = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 gap-12 mb-12">
           {speakingEngagements.map((engagement, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              {/* Media Container */}
-              <div className="relative aspect-video overflow-hidden">
-                {engagement.type === "video" ? (
-                  <video
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    src={`/public/${engagement.media}.mp4`}
-                    poster={`/public/${engagement.media}-poster.jpg`}
-                    controls
-                  />
-                ) : (
-                  <img
-                    src={`/public/${engagement.media}.jpg`}
-                    alt={engagement.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Media Container */}
+                <div className="relative aspect-video overflow-hidden bg-gray-100">
+                  {engagement.type === "video" ? (
+                    <div className="relative w-full h-full">
+                      <video
+                        className="w-full h-full object-cover"
+                        src={`/${engagement.media}.mp4`}
+                        controls
+                        playsInline
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={`/${engagement.media}.jpeg`}
+                      alt={engagement.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
 
-              {/* Content Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
-                <div className="bg-black/50 backdrop-blur-sm rounded-xl p-4">
-                  <h3 className="text-xl font-semibold mb-2">
-                    {engagement.title}
-                  </h3>
-                  <p className="text-purple-300 font-medium mb-2">
-                    {engagement.event}
-                  </p>
-                  <p className="text-sm text-gray-300 mb-3">
-                    {engagement.audience}
-                  </p>
-                  <p className="text-gray-200 text-sm leading-relaxed">
-                    {engagement.description}
-                  </p>
+                {/* Content */}
+                <div className="p-6 md:p-8">
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-semibold text-gray-900">
+                      {engagement.title}
+                    </h3>
+                    <p className="text-purple-600 font-medium">
+                      {engagement.event}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      {engagement.audience}
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      {engagement.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,12 +94,12 @@ const Speaking = () => {
         {/* Featured Video Section */}
         <div className="mt-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl overflow-hidden shadow-2xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative aspect-video">
+            <div className="relative aspect-video bg-gray-100">
               <video
                 className="w-full h-full object-cover"
-                src="/public/author-video-3.mp4"
-                poster="/public/author-video-3-poster.jpg"
+                src="/author-video-3.mp4"
                 controls
+                playsInline
               />
             </div>
             <div className="p-8 md:p-12 text-white">
