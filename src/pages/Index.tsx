@@ -70,9 +70,9 @@ const Index = () => {
             <div className="mt-20 md:mt-32">
               <Blog />
             </div>
-            <div className="mt-20 md:mt-32">
+            {/* <div className="mt-20 md:mt-32">
               <Articles />
-            </div>
+            </div> */}
           </div>
         </section>
 

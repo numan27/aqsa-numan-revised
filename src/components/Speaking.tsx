@@ -6,6 +6,8 @@ const Speaking = () => {
       audience: "200+ Attendees",
       description:
         "Building authentic communities that drive real business value",
+      media: "author-video-1",
+      type: "video",
     },
     {
       title: "UI/UX Design Fundamentals",
@@ -13,6 +15,8 @@ const Speaking = () => {
       audience: "150+ Attendees",
       description:
         "Essential principles and practices for creating effective user interfaces",
+      media: "author-img-1",
+      type: "image",
     },
     {
       title: "Tech Career Navigation",
@@ -20,11 +24,13 @@ const Speaking = () => {
       audience: "300+ Attendees",
       description:
         "Strategies for building and advancing your career in the tech industry",
+      media: "author-video-2",
+      type: "video",
     },
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -36,37 +42,94 @@ const Speaking = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {speakingEngagements.map((engagement, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {engagement.title}
-              </h3>
-              <p className="text-purple-600 font-medium mb-2">
-                {engagement.event}
-              </p>
-              <p className="text-sm text-gray-500 mb-4">
-                {engagement.audience}
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                {engagement.description}
-              </p>
+              {/* Media Container */}
+              <div className="relative aspect-video overflow-hidden">
+                {engagement.type === "video" ? (
+                  <video
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    src={`/public/${engagement.media}.mp4`}
+                    poster={`/public/${engagement.media}-poster.jpg`}
+                    controls
+                  />
+                ) : (
+                  <img
+                    src={`/public/${engagement.media}.jpg`}
+                    alt={engagement.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Content Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="bg-black/50 backdrop-blur-sm rounded-xl p-4">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {engagement.title}
+                  </h3>
+                  <p className="text-purple-300 font-medium mb-2">
+                    {engagement.event}
+                  </p>
+                  <p className="text-sm text-gray-300 mb-3">
+                    {engagement.audience}
+                  </p>
+                  <p className="text-gray-200 text-sm leading-relaxed">
+                    {engagement.description}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+        {/* Featured Video Section */}
+        <div className="mt-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative aspect-video">
+              <video
+                className="w-full h-full object-cover"
+                src="/public/author-video-3.mp4"
+                poster="/public/author-video-3-poster.jpg"
+                controls
+              />
+            </div>
+            <div className="p-8 md:p-12 text-white">
+              <h3 className="text-3xl font-bold mb-4">
+                Featured Talk: Design Leadership
+              </h3>
+              <p className="text-lg text-purple-100 mb-6">
+                Watch my keynote speech at the International Design Conference
+                where I share insights on building and leading successful design
+                teams.
+              </p>
+              <div className="flex items-center gap-4">
+                <span className="px-4 py-2 bg-white/20 rounded-full text-sm">
+                  45 min • Keynote
+                </span>
+                <span className="px-4 py-2 bg-white/20 rounded-full text-sm">
+                  500+ Attendees
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-20 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Book Me for Your Event
           </h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             I speak on topics including UI/UX design, community building, and
             entrepreneurship.
           </p>
-          <button className="bg-purple-600 text-white px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors duration-200">
+          <button className="bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
             Request Speaking
           </button>
         </div>
