@@ -139,12 +139,12 @@ const Speaking = () => {
 
         {/* Photo Collage Section */}
         <div className="mt-20">
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
               <img
                 src="/author-img-1.jpeg"
                 alt="Speaking engagement"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -159,7 +159,7 @@ const Speaking = () => {
               <img
                 src="/author-img-2.jpeg"
                 alt="Conference speaking"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -172,24 +172,9 @@ const Speaking = () => {
 
             <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
               <img
-                src="/author-img-3.jpeg"
-                alt="Community event"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-sm font-medium text-purple-200">
-                  Startup Grind
-                </p>
-                <p className="text-lg font-semibold">Community Building</p>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-2xl aspect-[4/3]">
-              <img
                 src="/author-img-4.jpeg"
                 alt="Design conference"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
