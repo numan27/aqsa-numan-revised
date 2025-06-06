@@ -1,5 +1,7 @@
+
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import AboutMe from "@/components/AboutMe";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -18,13 +20,15 @@ import BackToTop from "@/components/BackToTop";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       <Hero />
 
+      <AboutMe />
+
       <main className="relative">
-        <section className="relative py-20 md:py-32 bg-gradient-to-b from-white to-purple-50">
+        <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Benefits />
             <div className="mt-20 md:mt-32">
@@ -34,7 +38,7 @@ const Index = () => {
         </section>
 
         {/* Community & Ventures */}
-        <section className="relative py-20 md:py-32 bg-white">
+        <section className="relative py-20 md:py-32 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Community />
             <div className="mt-20 md:mt-32">
@@ -44,7 +48,7 @@ const Index = () => {
         </section>
 
         {/* Testimonials & Job Board */}
-        <section className="relative py-20 md:py-32 bg-gradient-to-b from-white to-pink-50">
+        <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Testimonials />
             {/* <div className="mt-20 md:mt-32">
@@ -54,7 +58,7 @@ const Index = () => {
         </section>
 
         {/* Events & Speaking */}
-        <section className="relative py-20 md:py-32 bg-white">
+        <section className="relative py-20 md:py-32 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Events />
             <div className="mt-20 md:mt-32">
@@ -64,7 +68,7 @@ const Index = () => {
         </section>
 
         {/* Media & Content */}
-        <section className="relative bg-gradient-to-b from-white to-purple-50">
+        <section className="relative bg-gradient-to-b from-background to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Podcasts />
             <div className="mt-20 md:mt-32">
@@ -77,7 +81,7 @@ const Index = () => {
         </section>
 
         {/* Newsletter & CTA */}
-        <section className="relative py-20 md:py-32 bg-white">
+        <section className="relative py-20 md:py-32 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Newsletter />
             <div className="mt-20 md:mt-32">
