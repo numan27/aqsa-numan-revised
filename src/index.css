@@ -98,9 +98,16 @@
 @layer utilities {
   .animated-border {
     position: relative;
-    background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.3), transparent);
+    background: linear-gradient(45deg, 
+      transparent, 
+      rgba(139, 92, 246, 0.5), 
+      rgba(168, 85, 247, 0.5), 
+      rgba(139, 92, 246, 0.5), 
+      transparent
+    );
     background-size: 300% 300%;
     animation: animatedBorder 3s ease infinite;
+    border-radius: 6px;
   }
 
   .animated-border::before {
@@ -110,7 +117,7 @@
     left: 1px;
     right: 1px;
     bottom: 1px;
-    background: hsl(var(--card));
+    background: hsl(217.2 32.6% 6%);
     border-radius: inherit;
     z-index: 1;
   }
@@ -133,6 +140,7 @@
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
     border: 1px solid rgba(139, 92, 246, 0.5);
     transition: all 0.3s ease;
+    border-radius: 6px;
   }
 
   .glow-border:hover {
