@@ -1,7 +1,7 @@
-
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
+import CoreExpertise from "@/components/CoreExpertise";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -26,6 +26,8 @@ const Index = () => {
       <Hero />
 
       <AboutMe />
+
+      <CoreExpertise />
 
       <main className="relative">
         <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card">

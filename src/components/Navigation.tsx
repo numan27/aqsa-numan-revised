@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -42,13 +41,13 @@ const Navigation = () => {
                 >
                   {item.name}
                   {isActive(item.href) && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-400 rounded-full"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-400 rounded-lg"></div>
                   )}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-200 transform hover:scale-105 glow-border"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-200 transform hover:scale-105 glow-border"
               >
                 Book a Call
               </Link>
@@ -85,7 +84,7 @@ const Navigation = () => {
             ))}
             <Link
               to="/contact"
-              className="block w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-200 text-center"
+              className="block w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-200 text-center"
               onClick={() => setIsOpen(false)}
             >
               Book a Call

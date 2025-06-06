@@ -1,4 +1,3 @@
-
 const Newsletter = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-purple-600 to-pink-600">
@@ -11,36 +10,42 @@ const Newsletter = () => {
           tech. Plus exclusive updates on my latest ventures and opportunities.
         </p>
 
-        <div className="animated-border rounded-2xl p-8 mb-8" style={{background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)'}}>
+        <div
+          className="animated-border rounded-2xl p-8 mb-8"
+          style={{
+            background: "rgba(255,255,255,0.1)",
+            backdropFilter: "blur(10px)",
+          }}
+        >
           <h3 className="text-2xl font-semibold text-white mb-4">
             What You'll Get:
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
             <ul className="space-y-2">
               <li className="flex items-center text-purple-100">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                <span className="w-2 h-2 bg-white rounded-lg mr-3"></span>
                 Weekly design tips and resources
               </li>
               <li className="flex items-center text-purple-100">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                <span className="w-2 h-2 bg-white rounded-lg mr-3"></span>
                 Career growth strategies
               </li>
               <li className="flex items-center text-purple-100">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                <span className="w-2 h-2 bg-white rounded-lg mr-3"></span>
                 Job opportunities and collaborations
               </li>
             </ul>
             <ul className="space-y-2">
               <li className="flex items-center text-purple-100">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                <span className="w-2 h-2 bg-white rounded-lg mr-3"></span>
                 Community event invitations
               </li>
               <li className="flex items-center text-purple-100">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                <span className="w-2 h-2 bg-white rounded-lg mr-3"></span>
                 Behind-the-scenes content
               </li>
               <li className="flex items-center text-purple-100">
-                <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                <span className="w-2 h-2 bg-white rounded-lg mr-3"></span>
                 Exclusive discounts and early access
               </li>
             </ul>
@@ -51,11 +56,11 @@ const Newsletter = () => {
           <input
             type="email"
             placeholder="Your email address"
-            className="flex-1 px-6 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+            className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
           />
           <button
             type="submit"
-            className="bg-white text-purple-600 px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105"
+            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 transform hover:scale-105"
           >
             Subscribe
           </button>

@@ -1,4 +1,3 @@
-
 const Speaking = () => {
   const speakingEngagements = [
     {
@@ -113,10 +112,10 @@ const Speaking = () => {
                 teams.
               </p>
               <div className="flex items-center gap-4">
-                <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
+                <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30">
                   45 min • Keynote
                 </span>
-                <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
+                <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30">
                   500+ Attendees
                 </span>
               </div>
@@ -142,11 +141,26 @@ const Speaking = () => {
         <div className="mt-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {[
-              { img: "author-img-1.jpeg", event: "Design Week Pakistan", title: "UI/UX Design Workshop" },
-              { img: "author-img-2.jpeg", event: "Tech Career Summit", title: "Career Growth Panel" },
-              { img: "author-img-4.jpeg", event: "Design Conference", title: "Keynote Speaker" }
+              {
+                img: "author-img-1.jpeg",
+                event: "Design Week Pakistan",
+                title: "UI/UX Design Workshop",
+              },
+              {
+                img: "author-img-2.jpeg",
+                event: "Tech Career Summit",
+                title: "Career Growth Panel",
+              },
+              {
+                img: "author-img-4.jpeg",
+                event: "Design Conference",
+                title: "Keynote Speaker",
+              },
             ].map((item, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-2xl aspect-[4/3] animated-border">
+              <div
+                key={index}
+                className="relative group overflow-hidden rounded-2xl aspect-[4/3] animated-border"
+              >
                 <img
                   src={`/${item.img}`}
                   alt="Speaking engagement"

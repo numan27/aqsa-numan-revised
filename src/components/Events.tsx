@@ -1,4 +1,3 @@
-
 const Events = () => {
   const upcomingEvents = [
     {
@@ -6,22 +5,25 @@ const Events = () => {
       date: "March 15, 2024",
       type: "Workshop",
       location: "Lahore",
-      description: "Learn how to lead design teams effectively while balancing work and life priorities."
+      description:
+        "Learn how to lead design teams effectively while balancing work and life priorities.",
     },
     {
       title: "Tech CEO Networking Meetup",
-      date: "March 22, 2024", 
+      date: "March 22, 2024",
       type: "Networking",
       location: "Virtual",
-      description: "Monthly gathering of startup founders and tech leaders for collaboration and growth."
+      description:
+        "Monthly gathering of startup founders and tech leaders for collaboration and growth.",
     },
     {
       title: "Women in Tech Panel",
       date: "April 5, 2024",
       type: "Panel Discussion",
       location: "Karachi",
-      description: "Inspiring discussion on breaking barriers and building successful tech careers."
-    }
+      description:
+        "Inspiring discussion on breaking barriers and building successful tech careers.",
+    },
   ];
 
   return (
@@ -32,19 +34,24 @@ const Events = () => {
             Upcoming Events
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join me at workshops, meetups, and speaking engagements designed to inspire 
-            and empower the tech community.
+            Join me at workshops, meetups, and speaking engagements designed to
+            inspire and empower the tech community.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {upcomingEvents.map((event, index) => (
-            <div key={index} className="animated-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+            <div
+              key={index}
+              className="animated-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group"
+            >
               <div className="flex items-center justify-between mb-4">
-                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">
+                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-lg text-sm font-medium border border-purple-500/30">
                   {event.type}
                 </span>
-                <span className="text-sm text-muted-foreground">{event.location}</span>
+                <span className="text-sm text-muted-foreground">
+                  {event.location}
+                </span>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-purple-400 transition-colors">
                 {event.title}
@@ -53,15 +60,15 @@ const Events = () => {
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 {event.description}
               </p>
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 glow-border">
+              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 glow-border">
                 Register Now
               </button>
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
-          <button className="border-2 border-purple-600 text-purple-400 px-8 py-3 rounded-full font-medium hover:bg-purple-600 hover:text-white transition-all duration-200">
+          <button className="border-2 border-purple-600 text-purple-400 px-8 py-3 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all duration-200">
             View All Events
           </button>
         </div>

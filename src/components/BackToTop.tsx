@@ -30,7 +30,7 @@ const BackToTop = () => {
         href="https://wa.me/your-number"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110"
+        className="bg-green-500 text-white p-4 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110"
         aria-label="Contact on WhatsApp"
       >
         <svg
@@ -47,7 +47,7 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-purple-600 text-white p-4 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-110"
+          className="bg-purple-600 text-white p-4 rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-110"
           aria-label="Back to top"
         >
           <svg

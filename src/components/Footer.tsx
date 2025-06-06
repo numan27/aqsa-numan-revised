@@ -48,7 +48,7 @@ const Footer = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-gray-700 transition-all duration-200"
+                  className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-gray-700 transition-all duration-200"
                   aria-label={link.name}
                 >
                   <link.icon className="w-5 h-5" />

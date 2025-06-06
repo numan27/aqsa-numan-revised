@@ -1,4 +1,3 @@
-
 const Podcasts = () => {
   const podcastAppearances = [
     {
@@ -41,7 +40,7 @@ const Podcasts = () => {
               className="animated-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">
+                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-lg text-sm font-medium border border-purple-500/30">
                   {appearance.duration}
                 </span>
                 <button className="text-purple-400 hover:text-purple-300 transition-colors">
@@ -70,7 +69,7 @@ const Podcasts = () => {
             discuss include design, entrepreneurship, community building, and
             work-life balance.
           </p>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-full font-medium transition-all duration-200 transform hover:scale-105 glow-border">
+          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 glow-border">
             Podcast Inquiry
           </button>
         </div>
