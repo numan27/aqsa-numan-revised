@@ -25,17 +25,17 @@ const Testimonials = () => {
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
             What People Say
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
             Real stories from professionals who've transformed their careers with my guidance.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="animated-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+            <div key={index} className="animated-border rounded-md p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
               <div className="flex items-center mb-4">
                 <img 
                   src={`https://images.unsplash.com/${testimonial.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80`}
@@ -43,11 +43,11 @@ const Testimonials = () => {
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <h4 className="font-semibold text-foreground group-hover:text-purple-400 transition-colors">{testimonial.name}</h4>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <h4 className="font-normal text-foreground group-hover:text-purple-400 transition-colors">{testimonial.name}</h4>
+                  <p className="text-sm text-muted-foreground font-light">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed italic">
+              <p className="text-muted-foreground leading-relaxed italic font-light">
                 "{testimonial.content}"
               </p>
             </div>
