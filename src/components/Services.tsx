@@ -1,143 +1,130 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Palette,
+  Users,
+  GraduationCap,
+  Briefcase,
+} from "lucide-react";
+
 const Services = () => {
   const services = [
     {
-      title: "UI/UX Design Services",
+      title: "UI/UX Design",
       description:
-        "User-first, conversion-driven designs that balance aesthetics with function — for startups, SaaS platforms, and mobile apps.",
-      features: [
-        "User Journey Mapping",
-        "Pixel-Perfect UI Design",
-        "Prototyping & Testing",
-        "Design Systems",
-      ],
-      price: "Custom Pricing",
-      highlight: false,
+        "Create intuitive and engaging digital experiences that drive user satisfaction and business growth through expert UI/UX design solutions.",
+      icon: Palette,
+      color: "from-purple-500 to-pink-500",
+      link: "/services#ui-ux-design",
     },
     {
-      title: "UI/UX Bootcamp",
+      title: "Career Mentorship",
       description:
-        "A hands-on bootcamp built for beginners and career switchers. Learn UI/UX with real-world case studies and live mentorship.",
-      features: [
-        "Real-World Case Studies",
-        "Live Mentorship",
-        "Job-Ready Projects",
-        "Portfolio Development",
-      ],
-      price: "Coming Soon",
-      highlight: true,
+        "Personalized guidance and support to help you navigate your design career path, from skill development to job placement.",
+      icon: GraduationCap,
+      color: "from-blue-500 to-purple-500",
+      link: "/services#mentorship",
     },
     {
-      title: "Job Acquisition Support",
+      title: "Design Workshops",
       description:
-        "Tailored support to help you secure jobs in the design and tech industry. You only pay when you win.",
-      features: [
-        "CV/Portfolio Review",
-        "Interview Preparation",
-        "Salary Negotiation",
-        "Job Matching",
-      ],
-      price: "Success-Based Fees",
-      highlight: false,
+        "Interactive workshops and training sessions to enhance your design skills and stay current with industry best practices.",
+      icon: Users,
+      color: "from-pink-500 to-orange-500",
+      link: "/services#workshops",
     },
     {
-      title: "B2B Tech Collaboration",
+      title: "Design Consultation",
       description:
-        "I connect founders, tech teams, designers, and vendors based on market trends and real needs.",
-      features: [
-        "Partner Matching",
-        "Vendor Selection",
-        "Team Scaling",
-        "Strategic Partnerships",
-      ],
-      price: "Consultation Required",
-      highlight: false,
+        "Expert consultation services to help businesses optimize their digital products and improve user experience.",
+      icon: Briefcase,
+      color: "from-green-500 to-teal-500",
+      link: "/services#consultation",
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Services I Offer
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From design to career guidance, I provide comprehensive support to
-            help you achieve your professional goals.
-          </p>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6"
+          >
+            Professional Services
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-xl text-muted-foreground"
+          >
+            Comprehensive design and career development solutions tailored to
+            your needs
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`animated-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group ${
-                service.highlight
-                  ? "bg-gradient-to-br from-purple-600 to-pink-600"
-                  : ""
-              }`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group relative"
             >
-              {service.highlight && (
-                <div className="inline-block px-3 py-1 bg-white/20 text-white rounded-lg text-sm font-medium mb-4">
-                  Featured
-                </div>
-              )}
-              <h3
-                className={`text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors ${
-                  service.highlight ? "text-white" : "text-foreground"
-                }`}
-              >
-                {service.title}
-              </h3>
-              <p
-                className={`mb-6 leading-relaxed ${
-                  service.highlight
-                    ? "text-purple-100"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {service.description}
-              </p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, idx) => (
-                  <li
-                    key={idx}
-                    className={`flex items-center ${
-                      service.highlight
-                        ? "text-purple-100"
-                        : "text-muted-foreground"
-                    }`}
-                  >
-                    <span
-                      className={`w-2 h-2 rounded-lg mr-3 ${
-                        service.highlight ? "bg-white" : "bg-purple-600"
-                      }`}
-                    ></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex items-center justify-between">
-                <span
-                  className={`font-semibold ${
-                    service.highlight ? "text-white" : "text-purple-400"
-                  }`}
+              <div className="relative z-10 bg-card rounded-2xl p-8 h-full flex flex-col">
+                <div
+                  className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6`}
                 >
-                  {service.price}
-                </span>
-                <button
-                  className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 glow-border ${
-                    service.highlight
-                      ? "bg-white text-purple-600 hover:bg-gray-100"
-                      : "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:scale-105"
-                  }`}
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className="text-2xl font-semibold text-foreground">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <p className="text-muted-foreground mb-6 flex-grow">
+                  {service.description}
+                </p>
+
+                <Link
+                  to={service.link}
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors group-hover:translate-x-1 duration-300"
                 >
                   Learn More
-                </button>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
-            </div>
+
+              {/* Animated border */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl group-hover:blur-2xl transition-all duration-300 -z-10" />
+            </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center mt-16"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+          >
+            View All Services
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

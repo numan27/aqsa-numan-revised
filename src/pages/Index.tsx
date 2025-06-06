@@ -28,29 +28,28 @@ const Index = () => {
       <AboutMe />
 
       <CoreExpertise />
+      <Services />
 
       <main className="relative">
-        <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card">
+        <section className="relative bg-gradient-to-b from-background to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Benefits />
-            <div className="mt-20 md:mt-32">
-              <Services />
-            </div>
+            <div className="mt-8 md:mt-12"></div>
           </div>
         </section>
 
         {/* Community & Ventures */}
-        <section className="relative py-20 md:py-32 bg-background">
+        <section className="relative py-10 md:py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Community />
-            <div className="mt-20 md:mt-32">
+            <div className="">
               <Ventures />
             </div>
           </div>
         </section>
 
         {/* Testimonials & Job Board */}
-        <section className="relative py-20 md:py-32 bg-gradient-to-b from-background to-card">
+        <section className="relative pb-20 md:pb-32 bg-gradient-to-b from-background to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Testimonials />
             {/* <div className="mt-20 md:mt-32">
@@ -60,10 +59,10 @@ const Index = () => {
         </section>
 
         {/* Events & Speaking */}
-        <section className="relative py-20 md:py-32 bg-background">
+        <section className="relative py-10 md:py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Events />
-            <div className="mt-20 md:mt-32">
+            <div className="">
               <Speaking />
             </div>
           </div>
@@ -73,9 +72,6 @@ const Index = () => {
         <section className="relative bg-gradient-to-b from-background to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Podcasts />
-            <div className="mt-20 md:mt-32">
-              <Blog />
-            </div>
             {/* <div className="mt-20 md:mt-32">
               <Articles />
             </div> */}

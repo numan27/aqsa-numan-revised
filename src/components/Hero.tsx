@@ -46,9 +46,9 @@ const Hero = () => {
           transition={{ delay: 0.2 }}
           className="mb-8"
         >
-          <span className="inline-flex items-center px-6 py-3 bg-purple-500/20 text-purple-300 rounded-lg text-sm font-medium backdrop-blur-sm border border-purple-500/30 glow-border">
+          <span className="inline-flex items-center px-6 py-1.5 bg-purple-500/20 text-purple-300 rounded-lg text-sm font-medium backdrop-blur-sm border border-purple-500/30 glow-border">
             <span className="w-2 h-2 bg-purple-400 rounded-lg mr-3 animate-pulse"></span>
-            UI/UX Designer • Community Builder • Mother of 3
+            UI/UX Design Expert • Career Mentor • Design Educator
           </span>
         </motion.div>
 
@@ -59,9 +59,9 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           className="text-5xl sm:text-6xl md:text-7xl font-heading font-bold text-white mb-8 leading-tight"
         >
-          Designing with
+          Crafting Digital
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mt-2">
-            Purpose & Passion
+            Excellence
           </span>
         </motion.h1>
 
@@ -72,9 +72,9 @@ const Hero = () => {
           transition={{ delay: 0.6 }}
           className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto font-body"
         >
-          Leading with Passion. Inspiring through Design. I help designers and
-          tech professionals thrive by blending creativity, community, and
-          compassion.
+          Transforming ideas into exceptional digital experiences. From UI/UX
+          design to career mentorship, I help you create impactful solutions
+          that drive success in the digital world.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -85,17 +85,17 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
         >
           <Link
-            to="/contact"
+            to="/services"
             className="group relative bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-3 rounded-lg text-lg font-medium overflow-hidden glow-border transition-all duration-300 transform hover:-translate-y-1 text-center font-body"
           >
-            <span className="relative z-10">Book a Strategy Call</span>
+            <span className="relative z-10">View Services</span>
             <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
           <Link
-            to="/portfolio"
+            to="/contact"
             className="group relative border-2 border-purple-500 text-purple-300 px-10 py-3 rounded-lg text-lg font-medium overflow-hidden backdrop-blur-sm hover:text-white transition-all duration-300 transform hover:-translate-y-1 text-center font-body glow-border"
           >
-            <span className="relative z-10">View My Work</span>
+            <span className="relative z-10">Book a Consultation</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </motion.div>

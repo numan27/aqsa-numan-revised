@@ -1,60 +1,80 @@
+import { motion } from "framer-motion";
+import { Quote } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Ahmed",
-      role: "UX Designer at Tech Startup",
-      content: "Aqsa's mentorship was instrumental in helping me transition from marketing to UX design. Her practical guidance and industry connections made all the difference.",
-      image: "photo-1582562124811-c09040d0a901"
+      quote:
+        "Aqsa's UI/UX bootcamp transformed my career. Her teaching style is engaging, and the community she's built is incredibly supportive.",
+      author: "Sarah Ahmed",
+      role: "UI Designer at TechCorp",
+      image: "/testimonials/sarah.jpg",
     },
     {
-      name: "Muhammad Ali",
-      role: "Frontend Developer",
-      content: "Through Aqsa's job placement program, I landed my dream role at a top tech company. Her support throughout the interview process was invaluable.",
-      image: "photo-1721322800607-8c38375eef04" 
+      quote:
+        "Working with Aqsa on our product redesign was a game-changer. Her attention to detail and user-centered approach delivered exceptional results.",
+      author: "Usman Khan",
+      role: "Product Manager at StartupX",
+      image: "/testimonials/usman.jpg",
     },
     {
-      name: "Fatima Khan",
-      role: "Startup Founder",
-      content: "The Tech CEO Hub community that Aqsa leads has been a game-changer for my startup. The connections and insights I've gained are priceless.",
-      image: "photo-1649972904349-6e44c42644a7"
-    }
+      quote:
+        "The mentorship I received from Aqsa helped me land my dream job. Her guidance on portfolio building and interview preparation was invaluable.",
+      author: "Fatima Zahra",
+      role: "UX Designer at DesignHub",
+      image: "/testimonials/fatima.jpg",
+    },
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
-            What People Say
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
-            Real stories from professionals who've transformed their careers with my guidance.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="animated-border rounded-md p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
-              <div className="flex items-center mb-4">
-                <img 
-                  src={`https://images.unsplash.com/${testimonial.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80`}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
+    <div className="py-10">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+          What People Say
+        </h2>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          Hear from the amazing people I've had the pleasure of working with and
+          mentoring.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className="group"
+          >
+            <div className="animated-border rounded-2xl p-8 h-full">
+              <Quote className="w-8 h-8 text-purple-400 mb-6" />
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                {testimonial.quote}
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.author}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div>
-                  <h4 className="font-normal text-foreground group-hover:text-purple-400 transition-colors">{testimonial.name}</h4>
-                  <p className="text-sm text-muted-foreground font-light">{testimonial.role}</p>
+                  <div className="font-semibold text-foreground">
+                    {testimonial.author}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonial.role}
+                  </div>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed italic font-light">
-                "{testimonial.content}"
-              </p>
             </div>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 

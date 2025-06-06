@@ -1,17 +1,37 @@
 import { motion } from "framer-motion";
 
 const CoreExpertise = () => {
-  const skills = [
-    "UI/UX Design",
-    "Community Building",
-    "Leadership",
-    "Mentorship",
-    "Strategic Planning",
-    "Brand Development",
-    "Design Systems",
-    "User Research",
-    "Workshop Facilitation",
-    "Team Management",
+  const expertise = [
+    {
+      title: "UI/UX Design",
+      description:
+        "Creating intuitive and engaging user experiences through research-driven design methodologies and modern design tools.",
+    },
+    {
+      title: "Career Development",
+      description:
+        "Guiding professionals through career transitions and growth with personalized mentorship and strategic planning.",
+    },
+    {
+      title: "Design Workshops",
+      description:
+        "Conducting interactive workshops to enhance design skills and implement industry best practices in real-world projects.",
+    },
+    {
+      title: "Product Strategy",
+      description:
+        "Developing comprehensive product strategies that align business goals with user needs and market opportunities.",
+    },
+    {
+      title: "Design Systems",
+      description:
+        "Building scalable design systems that ensure consistency and efficiency across digital products and teams.",
+    },
+    {
+      title: "Professional Mentorship",
+      description:
+        "Providing one-on-one guidance to help designers and tech professionals advance their careers and achieve their goals.",
+    },
   ];
 
   return (
@@ -28,13 +48,13 @@ const CoreExpertise = () => {
             Core Expertise
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Specialized skills and areas of excellence that drive my work and
-            impact in the design community.
+            Specialized skills and professional expertise that drive exceptional
+            results in design and career development.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
+          {expertise.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -48,13 +68,10 @@ const CoreExpertise = () => {
                   <span className="text-2xl text-purple-400">✦</span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">
-                  {skill}
+                  {item.title}
                 </h3>
               </div>
-              <p className="mt-4 text-muted-foreground">
-                Leveraging {skill.toLowerCase()} to create impactful solutions
-                and drive meaningful change in the design industry.
-              </p>
+              <p className="mt-4 text-muted-foreground">{item.description}</p>
             </motion.div>
           ))}
         </div>

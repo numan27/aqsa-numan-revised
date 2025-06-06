@@ -20,11 +20,11 @@ const AboutMe = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden animated-border p-1">
+            <div className="relative rounded-xl overflow-hidden">
               <img
                 src="/author-img-2.jpeg"
                 alt="Aqsa Numan"
-                className="w-full h-[600px] object-cover rounded-3xl"
+                className="w-full h-[600px] object-cover rounded-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl" />
             </div>
@@ -65,7 +65,7 @@ const AboutMe = () => {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">
                     {stat.number}
                   </div>
                   <div className="text-sm text-muted-foreground">
@@ -73,6 +73,21 @@ const AboutMe = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="/portfolio"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                View Portfolio
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-lg border-2 border-purple-500 text-purple-300 font-medium hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+              >
+                Get in Touch
+              </a>
             </div>
           </motion.div>
         </div>

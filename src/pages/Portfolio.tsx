@@ -1,68 +1,90 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Filter,
+  ChevronRight,
+} from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filters = [
+    { id: "all", label: "All Projects" },
+    { id: "web", label: "Web Design" },
+    { id: "mobile", label: "Mobile Apps" },
+    { id: "community", label: "Community" },
+    { id: "education", label: "Education" },
+  ];
 
   const projects = [
     {
-      title: "FinTech Dashboard Redesign",
-      category: "UI/UX Design",
+      title: "Tech CEO Hub",
       description:
-        "Complete redesign of a financial dashboard focusing on data visualization and user experience improvements.",
-      image: "photo-1486312338219-ce68d2c6f44d",
-      tags: ["UI Design", "UX Research", "Prototyping"],
-      results:
-        "40% increase in user engagement, 25% reduction in task completion time",
+        "A community platform for tech CEOs and founders to connect, learn, and grow together.",
+      image: "/portfolio/tech-ceo-hub.jpg",
+      tags: ["UI/UX Design", "Community Platform", "Web App"],
+      link: "https://techceohub.com",
+      github: "https://github.com/techceohub",
+      category: "community",
+      year: "2024",
+      client: "Tech CEO Hub",
+      role: "Lead Designer & Founder",
     },
     {
-      title: "E-commerce Mobile App",
-      category: "Mobile Design",
+      title: "92 Tech Talent",
       description:
-        "End-to-end design of a fashion e-commerce app with focus on seamless shopping experience.",
-      image: "photo-1581091226825-a6a2a5aee158",
-      tags: ["Mobile UI", "User Journey", "Conversion Optimization"],
-      results: "30% increase in mobile conversions, 4.8 app store rating",
+        "A job board and talent marketplace connecting Pakistani tech professionals with global opportunities.",
+      image: "/portfolio/92-tech-talent.jpg",
+      tags: ["UI/UX Design", "Job Board", "Web App"],
+      link: "https://92techtalent.com",
+      github: "https://github.com/92techtalent",
+      category: "web",
+      year: "2023",
+      client: "92 Tech Talent",
+      role: "UI/UX Designer",
     },
     {
-      title: "SaaS Platform Interface",
-      category: "Web Application",
+      title: "UI/UX Bootcamp",
       description:
-        "Comprehensive design system and interface for a project management SaaS platform.",
-      image: "photo-1488590528505-98d2b5aba04b",
-      tags: ["Design System", "Component Library", "User Testing"],
-      results: "50% reduction in development time, improved design consistency",
+        "A comprehensive learning platform for aspiring UI/UX designers.",
+      image: "/portfolio/bootcamp.jpg",
+      tags: ["UI/UX Design", "Education", "Web App"],
+      link: "https://bootcamp.aqsanuman.com",
+      github: "https://github.com/aqsanuman/bootcamp",
+      category: "education",
+      year: "2023",
+      client: "Self",
+      role: "Lead Designer & Instructor",
     },
     {
-      title: "Healthcare Portal",
-      category: "Healthcare Tech",
-      description:
-        "Patient portal design focusing on accessibility and ease of use for all age groups.",
-      image: "photo-1649972904349-6e44c42644a7",
-      tags: ["Accessibility", "Healthcare UX", "Information Architecture"],
-      results: "95% user satisfaction score, WCAG 2.1 AA compliance",
+      title: "Design System Pro",
+      description: "A comprehensive design system for modern web applications.",
+      image: "/portfolio/design-system.jpg",
+      tags: ["Design System", "UI Components", "Documentation"],
+      link: "https://designsystem.aqsanuman.com",
+      github: "https://github.com/aqsanuman/design-system",
+      category: "web",
+      year: "2024",
+      client: "Open Source",
+      role: "Lead Designer",
     },
     {
-      title: "Startup Landing Pages",
-      category: "Marketing Design",
-      description:
-        "High-converting landing pages for various tech startups focusing on clear messaging and CTAs.",
-      image: "photo-1526374965328-7f61d4dc18c5",
-      tags: ["Conversion Design", "A/B Testing", "Marketing"],
-      results: "Average 35% increase in conversion rates across all projects",
-    },
-    {
-      title: "Design System Library",
-      category: "Design Systems",
-      description:
-        "Comprehensive design system for a multi-product company ensuring consistency across platforms.",
-      image: "photo-1487058792275-0ad4aaf24ca7",
-      tags: ["Design Tokens", "Component Design", "Documentation"],
-      results:
-        "80% faster design-to-development handoff, unified brand experience",
+      title: "Community App",
+      description: "A mobile app for managing and growing tech communities.",
+      image: "/portfolio/community-app.jpg",
+      tags: ["Mobile App", "Community", "UI/UX Design"],
+      link: "https://community.aqsanuman.com",
+      github: "https://github.com/aqsanuman/community-app",
+      category: "mobile",
+      year: "2023",
+      client: "Community Partners",
+      role: "UI/UX Designer",
     },
   ];
 
@@ -83,53 +105,58 @@ const Portfolio = () => {
     },
   ];
 
-  const categories = [
-    { id: "all", label: "All Projects" },
-    { id: "UI/UX Design", label: "UI/UX Design" },
-    { id: "Mobile Design", label: "Mobile Design" },
-    { id: "Design Systems", label: "Design Systems" },
-  ];
-
   const filteredProjects =
-    activeTab === "all"
+    activeFilter === "all"
       ? projects
-      : projects.filter((project) => project.category === activeTab);
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-background to-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 mb-8 transition-colors"
+            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
 
-          <div className="text-center animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight">
-              My Work
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
+              My Portfolio
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              A collection of projects that showcase my approach to
-              user-centered design, from concept to implementation.
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+              A collection of my recent work, showcasing my passion for creating
+              beautiful and functional user experiences.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category) => (
+          </div>
+        </div>
+      </section>
+
+      {/* Filters Section */}
+      <section className="py-8 bg-card sticky top-0 z-10 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Filter className="w-5 h-5 text-purple-400" />
+              <span className="text-foreground font-medium">Filter by:</span>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {filters.map((filter) => (
                 <button
-                  key={category.id}
-                  onClick={() => setActiveTab(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 transform hover:scale-105 ${
-                    activeTab === category.id
-                      ? "bg-purple-600 text-white shadow-lg"
-                      : "bg-gray-100 text-gray-600 hover:bg-purple-100 hover:text-purple-600"
+                  key={filter.id}
+                  onClick={() => setActiveFilter(filter.id)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    activeFilter === filter.id
+                      ? "bg-purple-500 text-white"
+                      : "bg-purple-500/20 text-purple-300 hover:bg-purple-500/30"
                   }`}
                 >
-                  {category.label}
+                  {filter.label}
                 </button>
               ))}
             </div>
@@ -137,53 +164,41 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-20 bg-white">
+      {/* Projects Section */}
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredProjects.length === 0 ? (
-            <div className="text-center py-12">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                No projects found
-              </h3>
-              <p className="text-gray-600">
-                Try selecting a different category
-              </p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {filteredProjects.map((project, index) => (
-                <div key={index} className="group cursor-pointer">
-                  <div className="relative overflow-hidden rounded-2xl mb-6 bg-gray-100">
+          <div className="grid grid-cols-1 gap-12">
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div className="relative aspect-video rounded-2xl overflow-hidden">
                     <img
-                      src={`https://images.unsplash.com/${project.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80`}
+                      src={project.image}
                       alt={project.title}
-                      className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-purple-600/0 group-hover:bg-purple-600/20 transition-all duration-300"></div>
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="flex gap-2">
-                        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-50 transition-colors">
-                          <ExternalLink className="w-4 h-4 text-gray-600" />
-                        </div>
-                        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-50 transition-colors">
-                          <Github className="w-4 h-4 text-gray-600" />
-                        </div>
-                      </div>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm font-medium">
-                        {project.category}
-                      </span>
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <span>{project.year}</span>
+                      <span>•</span>
+                      <span>{project.client}</span>
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors">
+                    <h3 className="text-3xl font-semibold text-foreground group-hover:text-purple-400 transition-colors">
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {project.description}
                     </p>
 
@@ -191,89 +206,57 @@ const Portfolio = () => {
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm"
+                          className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-lg"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="p-4 bg-green-50 rounded-lg">
-                      <div className="text-sm text-green-600 font-medium mb-1">
-                        Results
-                      </div>
-                      <div className="text-sm text-green-700">
-                        {project.results}
-                      </div>
+                    <div className="flex items-center gap-6">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                      >
+                        <Github className="w-4 h-4 mr-2" />
+                        Source Code
+                      </a>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
-              Client Testimonials
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              What clients say about working with me.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
-                <p className="text-gray-700 leading-relaxed mb-6 italic text-lg">
-                  "{testimonial.content}"
-                </p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-semibold text-gray-900">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      {testimonial.role}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm text-purple-600 font-medium">
-                      Project
-                    </div>
-                    <div className="text-sm text-gray-700">
-                      {testimonial.project}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-purple-600">
+      <section className="py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-            Let's Create Something Amazing
+          <h2 className="text-4xl font-display font-bold text-foreground mb-6">
+            Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it and discuss how we
-            can bring your vision to life.
+          <p className="text-xl text-muted-foreground mb-8">
+            Let's work together to create something amazing.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all duration-200 transform hover:scale-105">
-              Start a Project
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-purple-600 transition-all duration-200 transform hover:scale-105">
-              Download Case Studies
-            </button>
-          </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+          >
+            Get in Touch
+            <ChevronRight className="w-4 h-4 ml-2" />
+          </Link>
         </div>
       </section>
 

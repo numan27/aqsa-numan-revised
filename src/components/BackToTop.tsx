@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ArrowUp } from "lucide-react";
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,17 +25,17 @@ const BackToTop = () => {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 flex flex-col gap-4 z-50">
+    <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
       {/* WhatsApp CTA */}
       <a
         href="https://wa.me/your-number"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 text-white p-4 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-110"
+        className="bg-green-500 text-white p-3 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105"
         aria-label="Contact on WhatsApp"
       >
         <svg
-          className="w-6 h-6"
+          className="w-5 h-5"
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -47,23 +48,10 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-purple-600 text-white p-4 rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-110"
+          className="bg-purple-500 text-white p-3 rounded-lg shadow-lg hover:bg-purple-600 transition-all duration-300 transform hover:scale-105"
           aria-label="Back to top"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
+          <ArrowUp className="w-5 h-5" />
         </button>
       )}
     </div>

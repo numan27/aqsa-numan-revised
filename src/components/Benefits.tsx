@@ -1,40 +1,39 @@
-
 const Benefits = () => {
   const benefits = [
     {
-      title: "Authentic Leadership",
+      title: "Industry Expertise",
       description:
-        "Real experience in tech leadership and community building. I understand your challenges because I've faced them too.",
+        "Over a decade of experience in UI/UX design and digital product development, delivering proven results for clients across industries.",
     },
     {
-      title: "Proven Results",
+      title: "Proven Methodology",
       description:
-        "From founding communities to placing professionals in top tech roles, my track record speaks for itself.",
+        "A structured approach to design and career development that has helped numerous professionals and businesses achieve their goals.",
     },
     {
-      title: "Holistic Approach",
+      title: "Personalized Solutions",
       description:
-        "I don't just focus on your career - I help you create a sustainable life that honors all your priorities.",
+        "Tailored strategies and solutions that address your specific needs, challenges, and objectives in design and career development.",
     },
     {
-      title: "Strong Network",
+      title: "Professional Network",
       description:
-        "Access to my curated communities of founders, designers, and tech leaders across multiple industries.",
+        "Access to a curated network of design professionals, industry leaders, and potential employers to support your growth.",
     },
     {
-      title: "Personalized Support",
+      title: "Comprehensive Support",
       description:
-        "Every solution is tailored to your unique situation, goals, and timeline. No cookie-cutter approaches.",
+        "End-to-end guidance from initial consultation to implementation, ensuring your success at every step of the process.",
     },
     {
-      title: "Ongoing Mentorship",
+      title: "Continuous Learning",
       description:
-        "Dedicated guidance for junior designers and those struggling to break into the industry. I monitor progress, provide feedback, and help navigate the challenging early stages of a design career.",
+        "Stay current with industry trends and best practices through regular updates, workshops, and professional development opportunities.",
     },
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
