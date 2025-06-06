@@ -1,3 +1,4 @@
+
 const Ventures = () => {
   const ventures = [
     {
@@ -24,13 +25,13 @@ const Ventures = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Ventures I'm Building
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Innovative projects aimed at empowering the next generation of
             designers and tech professionals.
           </p>
@@ -40,7 +41,7 @@ const Ventures = () => {
           {ventures.map((venture, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="animated-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group"
             >
               <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-400 relative overflow-hidden">
                 <img
@@ -49,16 +50,16 @@ const Ventures = () => {
                   className="w-full h-full object-cover opacity-80"
                 />
                 <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-white/90 text-purple-600 rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">
                     {venture.status}
                   </span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-purple-400 transition-colors">
                   {venture.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed">
                   {venture.description}
                 </p>
               </div>

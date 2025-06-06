@@ -32,13 +32,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Services I Offer
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From design to career guidance, I provide comprehensive support to help you 
             achieve your professional goals.
           </p>
@@ -46,31 +46,31 @@ const Services = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <div key={index} className={`p-8 rounded-2xl ${service.highlight ? 'bg-purple-600 text-white' : 'bg-white'} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
+            <div key={index} className={`animated-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group ${service.highlight ? 'bg-gradient-to-br from-purple-600 to-pink-600' : ''}`}>
               {service.highlight && (
                 <div className="inline-block px-3 py-1 bg-white/20 text-white rounded-full text-sm font-medium mb-4">
                   Featured
                 </div>
               )}
-              <h3 className={`text-2xl font-bold mb-4 ${service.highlight ? 'text-white' : 'text-gray-900'}`}>
+              <h3 className={`text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors ${service.highlight ? 'text-white' : 'text-foreground'}`}>
                 {service.title}
               </h3>
-              <p className={`mb-6 leading-relaxed ${service.highlight ? 'text-purple-100' : 'text-gray-600'}`}>
+              <p className={`mb-6 leading-relaxed ${service.highlight ? 'text-purple-100' : 'text-muted-foreground'}`}>
                 {service.description}
               </p>
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className={`flex items-center ${service.highlight ? 'text-purple-100' : 'text-gray-600'}`}>
+                  <li key={idx} className={`flex items-center ${service.highlight ? 'text-purple-100' : 'text-muted-foreground'}`}>
                     <span className={`w-2 h-2 rounded-full mr-3 ${service.highlight ? 'bg-white' : 'bg-purple-600'}`}></span>
                     {feature}
                   </li>
                 ))}
               </ul>
               <div className="flex items-center justify-between">
-                <span className={`font-semibold ${service.highlight ? 'text-white' : 'text-purple-600'}`}>
+                <span className={`font-semibold ${service.highlight ? 'text-white' : 'text-purple-400'}`}>
                   {service.price}
                 </span>
-                <button className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${service.highlight ? 'bg-white text-purple-600 hover:bg-gray-100' : 'bg-purple-600 text-white hover:bg-purple-700'}`}>
+                <button className={`px-6 py-2 rounded-full font-medium transition-all duration-200 glow-border ${service.highlight ? 'bg-white text-purple-600 hover:bg-gray-100' : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:scale-105'}`}>
                   Learn More
                 </button>
               </div>

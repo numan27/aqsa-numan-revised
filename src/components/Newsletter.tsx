@@ -1,3 +1,4 @@
+
 const Newsletter = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-purple-600 to-pink-600">
@@ -10,7 +11,7 @@ const Newsletter = () => {
           tech. Plus exclusive updates on my latest ventures and opportunities.
         </p>
 
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-8">
+        <div className="animated-border rounded-2xl p-8 mb-8" style={{background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)'}}>
           <h3 className="text-2xl font-semibold text-white mb-4">
             What You'll Get:
           </h3>
