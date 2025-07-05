@@ -60,7 +60,7 @@ const Podcasts = () => {
           ))}
         </div>
 
-        <div className="animated-border rounded-2xl p-8 text-center">
+        {/* <div className="animated-border rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-foreground mb-4">
             Invite Me to Your Podcast
           </h3>
@@ -72,7 +72,7 @@ const Podcasts = () => {
           <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 glow-border">
             Podcast Inquiry
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

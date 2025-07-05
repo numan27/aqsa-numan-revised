@@ -11,7 +11,7 @@ const CallToAction = () => {
           your goals with expert guidance and support.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="animated-border rounded-md p-6 hover:shadow-lg transition-all duration-300 group">
             <h3 className="text-lg font-normal text-foreground mb-2 group-hover:text-purple-400 transition-colors">
               Design Consultation
@@ -45,7 +45,7 @@ const CallToAction = () => {
               Contact Support
             </button>
           </div>
-        </div>
+        </div> */}
 
         <div className="animated-border rounded-md p-8 hover:shadow-lg transition-all duration-300">
           <h3 className="text-2xl font-normal text-foreground mb-4">

@@ -81,12 +81,10 @@ const Index = () => {
         </section>
 
         {/* Newsletter & CTA */}
-        <section className="relative py-20 md:py-32 bg-background">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Newsletter />
-            <div className="mt-20 md:mt-32">
-              <CallToAction />
-            </div>
+        <section className="relative bg-background">
+          {/* <Newsletter /> */}
+          <div className="mt-20 md:mt-32">
+            <CallToAction />
           </div>
         </section>
       </main>
