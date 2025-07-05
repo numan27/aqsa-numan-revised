@@ -25,7 +25,7 @@ const Community = () => {
       description:
         "A creator-powered community for podcast hosts, YouTubers, and content creators. Connect with like-minded voices and unlock collaboration opportunities for growth and visibility.",
       members: "800+ Members",
-      type: "Professional Network",
+      type: "Creator Network",
       link: "Join WeHost Club",
       url: "https://chat.whatsapp.com/Lf8M1vyOJSxHn3tYxna0YG?mode=r_t",
     },
@@ -54,11 +54,11 @@ const Community = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
-            Communities I Lead
+            Communities
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
-            Building bridges and creating opportunities through thoughtfully
-            curated professional communities.
+            Connecting designers, CEOs, talent, startups, and creators through
+            purpose-driven professional networks.
           </p>
         </div>
 

@@ -4,6 +4,7 @@ import AboutMe from "@/components/AboutMe";
 import CoreExpertise from "@/components/CoreExpertise";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
+import Achievements from "@/components/Achievements";
 import Testimonials from "@/components/Testimonials";
 import Ventures from "@/components/Ventures";
 import Community from "@/components/Community";
@@ -29,6 +30,7 @@ const Index = () => {
 
       <CoreExpertise />
       <Services />
+      <Achievements />
 
       <main className="relative">
         <section className="relative bg-gradient-to-b from-background to-card">
@@ -61,7 +63,7 @@ const Index = () => {
         {/* Events & Speaking */}
         <section className="relative py-10 md:py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Events />
+            {/* <Events /> */}
             <div className="">
               <Speaking />
             </div>
