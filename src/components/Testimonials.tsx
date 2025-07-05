@@ -49,7 +49,7 @@ const Testimonials = () => {
             className="group"
           >
             <div className="animated-border rounded-2xl p-8 h-full">
-              <Quote className="w-8 h-8 text-purple-400 mb-6" />
+              <Quote className="w-8 h-8 text-gray-600 dark:text-gray-300 mb-6" />
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 {testimonial.quote}
               </p>

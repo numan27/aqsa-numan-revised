@@ -1,36 +1,37 @@
 import { motion } from "framer-motion";
+import { Palette, Users, Heart, Target, Network } from "lucide-react";
 
 const CoreExpertise = () => {
   const expertise = [
     {
       title: "UI/UX Design",
       description:
-        "Creating intuitive and engaging user experiences through research-driven design methodologies and modern design tools.",
+        "Creating intuitive, user-centered web and mobile experiences that drive engagement and solve real problems.",
+      icon: Palette,
     },
     {
-      title: "Career Development",
+      title: "Community Leadership",
       description:
-        "Guiding professionals through career transitions and growth with personalized mentorship and strategic planning.",
+        "Leading large-scale design and tech communities like Friends of Figma Lahore and IxDF Lahore to foster growth and opportunity.",
+      icon: Users,
     },
     {
-      title: "Design Workshops",
+      title: "Women Empowerment & Mentorship",
       description:
-        "Conducting interactive workshops to enhance design skills and implement industry best practices in real-world projects.",
+        "Inspiring and mentoring women — especially mothers — to step into tech, balance life, and lead with confidence.",
+      icon: Heart,
     },
     {
-      title: "Product Strategy",
+      title: "Design Strategy & Problem Solving",
       description:
-        "Developing comprehensive product strategies that align business goals with user needs and market opportunities.",
+        "Aligning business goals with user needs through strategic thinking and user-centered design principles.",
+      icon: Target,
     },
     {
-      title: "Design Systems",
+      title: "Tech Ecosystem Building",
       description:
-        "Building scalable design systems that ensure consistency and efficiency across digital products and teams.",
-    },
-    {
-      title: "Professional Mentorship",
-      description:
-        "Providing one-on-one guidance to help designers and tech professionals advance their careers and achieve their goals.",
+        "Connecting the dots between startups, talent, tech CEOs, and incubators to build stronger digital ecosystems.",
+      icon: Network,
     },
   ];
 
@@ -53,27 +54,30 @@ const CoreExpertise = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {expertise.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="animated-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl text-purple-400">✦</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+          {expertise.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="animated-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 w-full group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center group-hover:bg-gray-200 dark:group-hover:bg-gray-700 transition-colors">
+                    <IconComponent className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {item.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">
-                  {item.title}
-                </h3>
-              </div>
-              <p className="mt-4 text-muted-foreground">{item.description}</p>
-            </motion.div>
-          ))}
+                <p className="mt-4 text-muted-foreground">{item.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

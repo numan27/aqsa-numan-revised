@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import PartnerCards from "./PartnerCards";
 
 const Hero = () => {
-  const partnerLogos = [
-    "Tech CEO Hub",
-    "92 Tech Talent",
-    "IxDF Lahore",
-    "Friends of Figma",
-  ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
@@ -23,6 +17,8 @@ const Hero = () => {
           <source src="/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/60"></div>
+        {/* Bottom blur overlay */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent backdrop-blur-sm"></div>
       </div>
 
       {/* Floating elements */}
@@ -38,45 +34,55 @@ const Hero = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mb-8"
+          className="mb-4"
         >
           <span className="inline-flex items-center px-6 py-1.5 bg-purple-500/20 text-purple-300 rounded-lg text-sm font-medium backdrop-blur-sm border border-purple-500/30 glow-border">
             <span className="w-2 h-2 bg-purple-400 rounded-lg mr-3 animate-pulse"></span>
             UI/UX Design Expert • Career Mentor • Design Educator
           </span>
         </motion.div>
-
         {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-5xl sm:text-6xl md:text-7xl font-heading font-bold text-white mb-8 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mb-4"
         >
-          Crafting Digital
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mt-2">
-            Excellence
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mt-2">
+            Designing{" "}
+          </span>
+          Seamless Experiences.
+          <br />
+        </motion.h1>{" "}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white mb-8"
+        >
+          Leading {""}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mt-2">
+            Tech Connections.
           </span>
         </motion.h1>
-
         {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto font-body"
+          className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto font-body"
         >
-          Transforming ideas into exceptional digital experiences. From UI/UX
-          design to career mentorship, I help you create impactful solutions
-          that drive success in the digital world.
+          UI/UX design is my craft, and community-building is my mission. With
+          5+ years of experience, I deliver intuitive digital solutions, lead
+          thriving tech communities, connect startups with the right partners,
+          and help top talent find their place in the tech world.
         </motion.p>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -99,31 +105,8 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </motion.div>
-
-        {/* Partner Logos */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-16"
-        >
-          <p className="text-sm text-gray-400 mb-8 uppercase tracking-wider font-medium font-body">
-            Trusted by leading communities
-          </p>
-          <div className="flex flex-wrap gap-8 justify-center opacity-60">
-            {partnerLogos.map((logo, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                className="text-gray-300 font-medium text-lg hover:opacity-100 transition-opacity hover:text-purple-400 font-body"
-              >
-                {logo}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        {/* Partner Cards */}
+        <PartnerCards />
       </div>
     </section>
   );

@@ -6,41 +6,56 @@ import {
   Users,
   GraduationCap,
   Briefcase,
+  Network,
+  Building,
+  Calendar,
+  Megaphone,
+  UserCheck,
 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      title: "UI/UX Design",
+      title: "UI/UX Design & Training",
       description:
-        "Create intuitive and engaging digital experiences that drive user satisfaction and business growth through expert UI/UX design solutions.",
+        "Complete UI/UX audits, redesigns, and new product designs for websites, mobile apps, and SaaS platforms. Plus hands-on bootcamps and training for beginners and professionals to upskill in design.",
       icon: Palette,
-      color: "from-purple-500 to-pink-500",
       link: "/services#ui-ux-design",
     },
     {
-      title: "Career Mentorship",
+      title: "Talent Network & Job Matchmaking",
       description:
-        "Personalized guidance and support to help you navigate your design career path, from skill development to job placement.",
-      icon: GraduationCap,
-      color: "from-blue-500 to-purple-500",
-      link: "/services#mentorship",
+        "Helping tech talent get hired and connecting companies with skilled UI/UX and tech professionals.",
+      icon: UserCheck,
+      link: "/services#talent-network",
     },
     {
-      title: "Design Workshops",
+      title: "Tech CEO Collaboration Support",
       description:
-        "Interactive workshops and training sessions to enhance your design skills and stay current with industry best practices.",
-      icon: Users,
-      color: "from-pink-500 to-orange-500",
-      link: "/services#workshops",
+        "Helping tech leaders build strategic partnerships and co-create digital impact.",
+      icon: Building,
+      link: "/services#ceo-support",
     },
     {
-      title: "Design Consultation",
+      title: "Startup Incubation Advisory",
       description:
-        "Expert consultation services to help businesses optimize their digital products and improve user experience.",
+        "Guiding startups to the right incubators, mentorship opportunities, and funding resources.",
       icon: Briefcase,
-      color: "from-green-500 to-teal-500",
-      link: "/services#consultation",
+      link: "/services#startup-advisory",
+    },
+    {
+      title: "Tech Event Engagement & Promotion",
+      description:
+        "Helping event organizers reach the right tech audience and grow their community presence.",
+      icon: Calendar,
+      link: "/services#event-promotion",
+    },
+    {
+      title: "Digital PR & Personal Branding",
+      description:
+        "Building strong digital visibility for individuals and brands across social media, press, and online platforms.",
+      icon: Megaphone,
+      link: "/services#digital-pr",
     },
   ];
 
@@ -54,7 +69,7 @@ const Services = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6"
           >
-            Professional Services
+            💼 Services
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -63,12 +78,11 @@ const Services = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-muted-foreground"
           >
-            Comprehensive design and career development solutions tailored to
-            your needs
+            Here's how I help individuals, teams, and companies grow.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -79,10 +93,8 @@ const Services = () => {
               className="group relative"
             >
               <div className="relative z-10 bg-card rounded-2xl p-8 h-full flex flex-col">
-                <div
-                  className={`w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6`}
-                >
-                  <service.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-6 group-hover:bg-gray-200 dark:group-hover:bg-gray-700 transition-colors">
+                  <service.icon className="w-6 h-6 text-gray-600 dark:text-gray-300" />
                 </div>
 
                 <div className="flex items-center gap-3 mb-4">
@@ -97,7 +109,7 @@ const Services = () => {
 
                 <Link
                   to={service.link}
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors group-hover:translate-x-1 duration-300"
+                  className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors group-hover:translate-x-1 duration-300"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -105,7 +117,7 @@ const Services = () => {
               </div>
 
               {/* Animated border */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl group-hover:blur-2xl transition-all duration-300 -z-10" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-gray-200/20 to-gray-300/20 dark:from-gray-700/20 dark:to-gray-600/20 blur-xl group-hover:blur-2xl transition-all duration-300 -z-10" />
             </motion.div>
           ))}
         </div>
@@ -119,7 +131,7 @@ const Services = () => {
         >
           <Link
             to="/services"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1"
           >
             View All Services
             <ArrowRight className="w-4 h-4 ml-2" />
