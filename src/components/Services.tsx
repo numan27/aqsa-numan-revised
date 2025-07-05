@@ -16,11 +16,18 @@ import {
 const Services = () => {
   const services = [
     {
-      title: "UI/UX Design & Training",
+      title: "UI/UX Design",
       description:
-        "Complete UI/UX audits, redesigns, and new product designs for websites, mobile apps, and SaaS platforms. Plus hands-on bootcamps and training for beginners and professionals to upskill in design.",
+        "Complete UI/UX audits, redesigns, and new product designs for websites, mobile apps, and SaaS platforms.",
       icon: Palette,
       link: "/services#ui-ux-design",
+    },
+    {
+      title: "UI/UX Bootcamps & Trainings",
+      description:
+        "Hands-on learning experiences for beginners and professionals to upskill in design.",
+      icon: GraduationCap,
+      link: "/services#ui-ux-bootcamps",
     },
     {
       title: "Talent Network & Job Matchmaking",
@@ -30,9 +37,9 @@ const Services = () => {
       link: "/services#talent-network",
     },
     {
-      title: "Tech CEO Collaboration Support",
+      title: "Tech CEO Collaboration & PR",
       description:
-        "Helping tech leaders build strategic partnerships and co-create digital impact.",
+        "Helping tech leaders build strategic partnerships, co-create digital impact, and build strong digital visibility through PR and personal branding across social media, press, and online platforms.",
       icon: Building,
       link: "/services#ceo-support",
     },
@@ -49,13 +56,6 @@ const Services = () => {
         "Helping event organizers reach the right tech audience and grow their community presence.",
       icon: Calendar,
       link: "/services#event-promotion",
-    },
-    {
-      title: "Digital PR & Personal Branding",
-      description:
-        "Building strong digital visibility for individuals and brands across social media, press, and online platforms.",
-      icon: Megaphone,
-      link: "/services#digital-pr",
     },
   ];
 

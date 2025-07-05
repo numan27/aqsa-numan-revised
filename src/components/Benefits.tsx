@@ -27,7 +27,7 @@ const Benefits = () => {
       icon: Globe,
       title: "Community-Backed Leadership",
       description:
-        "As the current Chapter Leader of IxDF Lahore and former Management Lead at Friends of Figma Lahore, I've mentored hundreds of designers and organized impactful events that connect learning with real opportunities. Working with me means plugging into a broader network of talent, thought leadership, and innovation.",
+        "As the Country Manager Pakistan at IxDF and former Management Lead at Friends of Figma Lahore, I've mentored hundreds of professionals across multiple leading communities. I've organized impactful events that connect learning with real opportunities, spanning design, tech, entrepreneurship, and professional development. Working with me means plugging into a broader network of talent, thought leadership, and innovation across diverse communities.",
     },
     {
       icon: TrendingUp,
