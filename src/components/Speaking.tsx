@@ -109,7 +109,7 @@ const Speaking = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Gallery
+            Talks Highlights
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Sharing expertise and insights on design, leadership, and career
@@ -120,46 +120,48 @@ const Speaking = () => {
         {/* Multi-Column Grid */}
         <div className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {speakingEngagements.map((engagement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="bg-card text-card-foreground rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border h-full">
-                  {/* Media Container */}
-                  <div className="relative aspect-[9/16] overflow-hidden bg-muted rounded-lg mb-4">
-                    {engagement.type === "video" ? (
-                      <div className="relative w-full h-full">
-                        <video
-                          className="w-full h-full object-cover"
-                          src={`/${engagement.media}.mp4`}
-                          controls
-                          playsInline
-                        />
-                        <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-xs flex items-center gap-1">
-                          <Play className="w-3 h-3" />
-                          {engagement.duration}
+            {speakingEngagements
+              .filter((engagement) => engagement.type === "video")
+              .map((engagement, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="bg-card text-card-foreground rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 border h-full">
+                    {/* Media Container */}
+                    <div className="relative aspect-[9/16] overflow-hidden bg-muted rounded-lg mb-4">
+                      {engagement.type === "video" ? (
+                        <div className="relative w-full h-full">
+                          <video
+                            className="w-full h-full object-cover"
+                            src={`/${engagement.media}.mp4`}
+                            controls
+                            playsInline
+                          />
+                          <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-xs flex items-center gap-1">
+                            <Play className="w-3 h-3" />
+                            {engagement.duration}
+                          </div>
                         </div>
-                      </div>
-                    ) : (
-                      <img
-                        src={`/${engagement.media}.jpeg`}
-                        alt={engagement.title}
-                        className="w-full h-full object-cover"
-                      />
-                    )}
-                    {engagement.type === "video" && (
-                      <div className="absolute top-2 left-2 px-2 py-1 bg-purple-500/90 text-white rounded text-xs">
-                        Video
-                      </div>
-                    )}
+                      ) : (
+                        <img
+                          src={`/${engagement.media}.jpeg`}
+                          alt={engagement.title}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
+                      {engagement.type === "video" && (
+                        <div className="absolute top-2 left-2 px-2 py-1 bg-purple-500/90 text-white rounded text-xs">
+                          Video
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
           </div>
         </div>
 

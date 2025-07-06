@@ -11,6 +11,7 @@ import Community from "@/components/Community";
 import JobBoard from "@/components/JobBoard";
 import Events from "@/components/Events";
 import Speaking from "@/components/Speaking";
+import Gallery from "@/components/Gallery";
 import Podcasts from "@/components/Podcasts";
 import Blog from "@/components/Blog";
 import Articles from "@/components/Articles";
@@ -69,6 +70,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Gallery */}
+        <Gallery />
 
         {/* Media & Content */}
         <section className="relative bg-gradient-to-b from-background to-card">
