@@ -105,15 +105,15 @@ const Speaking = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-8 sm:py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Talks Highlights
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
+            Speaking & Workshops
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Sharing expertise and insights on design, leadership, and career
-            development at industry events and conferences.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Sharing insights on design, leadership, and community building
+            through engaging talks and interactive workshops.
           </p>
         </div>
 
@@ -154,7 +154,7 @@ const Speaking = () => {
                         />
                       )}
                       {engagement.type === "video" && (
-                        <div className="absolute top-2 left-2 px-2 py-1 bg-purple-500/90 text-white rounded text-xs">
+                        <div className="absolute top-2 left-2 px-2 py-1 bg-indigo-500/90 text-white rounded text-xs">
                           Video
                         </div>
                       )}
@@ -180,7 +180,7 @@ const Speaking = () => {
               </div>
             </div>
             <div className="p-8 md:p-12 text-foreground">
-              <h3 className="text-3xl font-bold mb-4">
+                              <h3 className="text-2xl font-bold mb-4">
                 Featured Talk: Design Leadership
               </h3>
               <p className="text-lg text-muted-foreground mb-6">
@@ -189,13 +189,13 @@ const Speaking = () => {
                 teams.
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30">
+                <span className="px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-lg text-sm border border-indigo-500/30">
                   45 min • Keynote
                 </span>
-                <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30">
+                <span className="px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-lg text-sm border border-indigo-500/30">
                   500+ Attendees
                 </span>
-                <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-lg text-sm border border-purple-500/30">
+                <span className="px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-lg text-sm border border-indigo-500/30">
                   International Conference
                 </span>
               </div>
@@ -205,14 +205,14 @@ const Speaking = () => {
 
         {/* CTA Section */}
         {/* <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
+                          <h3 className="text-xl font-bold text-foreground mb-4">
             Invite Me to Speak
           </h3>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             I'm available for speaking engagements, workshops, and panel
             discussions on design, leadership, and career development.
           </p>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 glow-border">
+          <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 glow-border">
             Speaking Inquiry
           </button>
         </div> */}

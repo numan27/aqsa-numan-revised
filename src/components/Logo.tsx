@@ -6,10 +6,10 @@ interface LogoProps {
 }
 
 const Logo = ({ className = "", variant = "default" }: LogoProps) => {
-  const baseClasses = "font-display font-extrabold transition-all duration-300";
+  const baseClasses = "font-medium transition-all duration-300";
   const variantClasses = {
-    default: "text-2xl text-purple-600 hover:text-purple-700",
-    footer: "text-2xl text-purple-400 hover:text-purple-300",
+    default: "text-xl sm:text-2xl text-foreground hover:text-indigo-600",
+    footer: "text-xl sm:text-2xl text-foreground hover:text-indigo-400",
   };
 
   return (
@@ -17,24 +17,24 @@ const Logo = ({ className = "", variant = "default" }: LogoProps) => {
       to="/"
       className={`${baseClasses} ${variantClasses[variant]} ${className} group`}
     >
-      <div className="relative inline-block">
-        <span className="relative z-10 transform hover:scale-105 transition-transform duration-300">
-          <span className="inline-block transform hover:rotate-1 transition-transform duration-300">
-            A
+      <div className="flex items-center">
+        {/* Creative A with subtle accent */}
+        <div className="relative">
+          <span className="font-semibold tracking-tight">A</span>
+          <div className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+
+        {/* Rest of the name */}
+        <span className="font-medium tracking-wide ml-0.5">qsa</span>
+
+        {/* Last name with creative spacing and underline effect */}
+        <div className="relative ml-3">
+          <span className="font-light tracking-wider text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+            Numan
           </span>
-          <span className="inline-block transform hover:-rotate-1 transition-transform duration-300">
-            q
-          </span>
-          <span className="inline-block transform hover:rotate-2 transition-transform duration-300">
-            s
-          </span>
-          <span className="inline-block transform hover:-rotate-2 transition-transform duration-300">
-            a
-          </span>
-        </span>
-        <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-indigo-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></div>
+        </div>
       </div>
-      <span className="ml-2 text-gray-700 font-bold tracking-wide">Numan</span>
     </Link>
   );
 };

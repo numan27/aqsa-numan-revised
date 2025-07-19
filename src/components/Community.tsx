@@ -50,15 +50,15 @@ const Community = () => {
   ];
 
   return (
-    <section id="community" className="py-10 bg-background">
+    <section id="community" className="py-8 sm:py-12 md:py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
-            Communities
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
+            Communities I Lead
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
-            Connecting designers, CEOs, talent, startups, and creators through
-            purpose-driven professional networks.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Building and nurturing tech communities that empower professionals
+            and drive innovation.
           </p>
         </div>
 
@@ -69,14 +69,14 @@ const Community = () => {
               className="animated-border rounded-md p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group flex flex-col h-full"
             >
               <div className="mb-4">
-                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm font-light border border-purple-500/30">
+                <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-md text-sm font-light border border-indigo-500/30">
                   {community.type}
                 </span>
               </div>
-              <h3 className="text-2xl font-normal text-foreground mb-4 group-hover:text-purple-400 transition-colors">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-indigo-400 transition-colors">
                 {community.title}
               </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed font-light flex-grow">
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4">
                 {community.description}
               </p>
               <div className="flex items-center justify-between mt-auto">
@@ -87,7 +87,7 @@ const Community = () => {
                   href={community.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-2 rounded-md text-sm font-light transition-all duration-200 transform hover:scale-105 glow-border hover:from-purple-700 hover:to-pink-700"
+                  className="inline-flex items-center bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-3 py-2 rounded-md text-sm font-light transition-all duration-200 transform hover:scale-105 glow-border hover:from-indigo-700 hover:to-blue-700"
                 >
                   {community.link}
                   <ExternalLink className="w-3 h-3 ml-2" />

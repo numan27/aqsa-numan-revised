@@ -8,14 +8,8 @@ import Achievements from "@/components/Achievements";
 import Testimonials from "@/components/Testimonials";
 import Ventures from "@/components/Ventures";
 import Community from "@/components/Community";
-import JobBoard from "@/components/JobBoard";
-import Events from "@/components/Events";
 import Speaking from "@/components/Speaking";
 import Gallery from "@/components/Gallery";
-import Podcasts from "@/components/Podcasts";
-import Blog from "@/components/Blog";
-import Articles from "@/components/Articles";
-import Newsletter from "@/components/Newsletter";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
@@ -75,19 +69,19 @@ const Index = () => {
         <Gallery />
 
         {/* Media & Content */}
-        <section className="relative bg-gradient-to-b from-background to-card">
+        {/* <section className="relative bg-gradient-to-b from-background to-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Podcasts />
-            {/* <div className="mt-20 md:mt-32">
+            <div className="mt-20 md:mt-32">
               <Articles />
-            </div> */}
+            </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Newsletter & CTA */}
         <section className="relative bg-background">
           {/* <Newsletter /> */}
-          <div className="mt-20 md:mt-32">
+          <div className="mt-20">
             <CallToAction />
           </div>
         </section>

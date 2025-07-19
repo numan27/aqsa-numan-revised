@@ -35,19 +35,19 @@ const Navigation = () => {
                   to={item.href}
                   className={`px-3 py-2 text-sm font-medium transition-all duration-200 relative ${
                     isActive(item.href)
-                      ? "text-purple-400"
-                      : "text-foreground hover:text-purple-400"
+                      ? "text-indigo-400"
+                      : "text-foreground hover:text-indigo-400"
                   }`}
                 >
                   {item.name}
                   {isActive(item.href) && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-purple-400 rounded-lg"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-indigo-400 rounded-lg"></div>
                   )}
                 </Link>
               ))}
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-200 transform hover:scale-105 glow-border"
+                className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm font-medium hover:from-indigo-700 hover:to-blue-700 hover:shadow-lg transition-all duration-200 transform hover:scale-105 glow-border"
               >
                 Book a Call
               </Link>
@@ -57,41 +57,45 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-purple-400 transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-indigo-400 transition-colors duration-200"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
-          </div>
         </div>
       </div>
 
+        {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-md border-t border-border">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-3 py-2 font-medium transition-colors duration-200 rounded-lg ${
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-2 text-base font-medium transition-all duration-200 relative ${
                   isActive(item.href)
-                    ? "text-purple-400 bg-purple-500/10"
-                    : "text-foreground hover:text-purple-400 hover:bg-purple-500/10"
+                      ? "text-indigo-400"
+                      : "text-foreground hover:text-indigo-400"
                 }`}
-                onClick={() => setIsOpen(false)}
               >
                 {item.name}
+                  {isActive(item.href) && (
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-indigo-400 rounded-lg"></div>
+                  )}
               </Link>
             ))}
             <Link
               to="/contact"
-              className="block w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-200 text-center"
               onClick={() => setIsOpen(false)}
+                className="block mt-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:from-indigo-700 hover:to-blue-700 hover:shadow-lg transition-all duration-200 transform hover:scale-105 glow-border text-center"
             >
               Book a Call
             </Link>
           </div>
         </div>
       )}
+      </div>
     </nav>
   );
 };

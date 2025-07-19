@@ -150,7 +150,7 @@ const Testimonials = () => {
           {renderStars(testimonial.rating)}
         </div>
         <Quote className="w-5 h-5 text-muted-foreground mb-3" />
-        <p className="text-muted-foreground text-xs leading-relaxed mb-4 line-clamp-3">
+        <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-6 leading-relaxed">
           "{testimonial.quote}"
         </p>
         <div className="flex items-center gap-2">
@@ -162,12 +162,12 @@ const Testimonials = () => {
             />
           </div>
           <div>
-            <div className="font-semibold text-foreground text-xs">
+            <h4 className="text-sm sm:text-base md:text-lg font-semibold text-foreground">
               {testimonial.author}
-            </div>
-            <div className="text-xs text-muted-foreground">
+            </h4>
+            <p className="text-xs sm:text-sm text-muted-foreground">
               {testimonial.role}
-            </div>
+            </p>
           </div>
         </div>
       </motion.div>
@@ -175,14 +175,14 @@ const Testimonials = () => {
   );
 
   return (
-    <div className="py-20">
+    <div className="py-8 sm:py-12 md:py-16">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
           What People Say
         </h2>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Hear from the amazing people I've had the pleasure of working with and
-          mentoring.
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+          What clients, colleagues, and community members say about working with
+          me and the impact of our collaborations.
         </p>
       </div>
 

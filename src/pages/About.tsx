@@ -43,7 +43,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
+            className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
@@ -51,10 +51,10 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-foreground mb-6 leading-tight">
                 My Story
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-8 leading-relaxed">
                 From a passionate design student to a community leader and
                 mother of three, my journey has been about finding balance,
                 creating impact, and inspiring others to pursue their dreams
@@ -63,11 +63,11 @@ const About = () => {
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <stat.icon className="w-6 h-6 text-purple-400 mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-foreground">
+                    <stat.icon className="w-6 h-6 text-indigo-400 mx-auto mb-2" />
+                    <div className="text-base sm:text-lg md:text-xl font-bold text-foreground">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-xs sm:text-sm text-muted-foreground">
                       {stat.label}
                     </div>
                   </div>
@@ -89,13 +89,13 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-card">
+      <section className="py-8 sm:py-12 md:py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
               What Drives Me
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
               These core values shape everything I do, from the communities I
               build to the designs I create.
             </p>
@@ -107,10 +107,10 @@ const About = () => {
                 key={index}
                 className="animated-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-foreground mb-4">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-4">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -120,10 +120,10 @@ const About = () => {
       </section>
 
       {/* Journey Section */}
-      <section className="py-20 bg-background">
+      <section className="py-8 sm:py-12 md:py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
               My Journey
             </h2>
           </div>
@@ -131,15 +131,15 @@ const About = () => {
           <div className="space-y-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
-                <div className="text-2xl font-bold text-purple-400 mb-2">
+                <div className="text-base sm:text-lg md:text-xl font-bold text-indigo-400 mb-2">
                   2018
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">
                   The Beginning
                 </h3>
               </div>
               <div className="md:w-2/3">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
                   Started my journey in UI/UX design while managing family
                   responsibilities. Discovered my passion for creating
                   user-centered designs that solve real problems.
@@ -149,15 +149,15 @@ const About = () => {
 
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
-                <div className="text-2xl font-bold text-purple-400 mb-2">
+                <div className="text-base sm:text-lg md:text-xl font-bold text-indigo-400 mb-2">
                   2020
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">
                   Community Building
                 </h3>
               </div>
               <div className="md:w-2/3">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
                   Founded my first tech community, realizing the power of
                   bringing like-minded professionals together. Started building
                   bridges in the Pakistani tech ecosystem.
@@ -167,15 +167,15 @@ const About = () => {
 
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
-                <div className="text-2xl font-bold text-purple-400 mb-2">
+                <div className="text-base sm:text-lg md:text-xl font-bold text-indigo-400 mb-2">
                   2022
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">
                   Scaling Impact
                 </h3>
               </div>
               <div className="md:w-2/3">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
                   Launched multiple communities including Tech CEO Hub and 92
                   Tech Talent. Started helping professionals find their dream
                   jobs in tech.
@@ -185,15 +185,15 @@ const About = () => {
 
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
-                <div className="text-2xl font-bold text-purple-400 mb-2">
+                <div className="text-base sm:text-lg md:text-xl font-bold text-indigo-400 mb-2">
                   2024
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">
                   Building the Future
                 </h3>
               </div>
               <div className="md:w-2/3">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed">
                   Developing innovative platforms and bootcamps to empower the
                   next generation of designers and tech professionals. Focusing
                   on sustainable growth and impact.

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { Linkedin, Mail, Facebook, MessageCircle } from "lucide-react";
 import Logo from "./Logo";
 
 const Footer = () => {
@@ -25,50 +25,49 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "Email", href: "mailto:contact@aqsanuman.com", icon: Mail },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/share/1Dt1GVd7Qt/?mibextid=wwXIfr",
+      icon: Facebook,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/aqsanuman-uxuidesigner?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      icon: Linkedin,
+    },
+    {
+      name: "WhatsApp",
+      href: "https://wa.me/923224902181",
+      icon: MessageCircle,
+    },
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <Logo variant="footer" />
-            <p className="mt-6 text-gray-300 leading-relaxed">
-              UI/UX Designer, Community Builder, and Mother of 3. Designing with
-              purpose, leading with passion, inspiring through motherhood.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="flex flex-col gap-3">
+            <Logo variant="footer" className="mb-6" />
+            <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
+              UI/UX designer, community builder, and mother of three. Creating
+              meaningful digital experiences and empowering the next generation
+              of tech professionals.
             </p>
-            <div className="mt-8 flex space-x-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 hover:text-purple-400 hover:bg-gray-700 transition-all duration-200"
-                  aria-label={link.name}
-                >
-                  <link.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Links Sections */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-lg font-semibold mb-6 text-white">
+              <h3 className="text-base sm:text-lg font-semibold text-foreground mb-4">
                 {category}
-              </h4>
-              <ul className="space-y-4">
-                {links.map((link, index) => (
-                  <li key={index}>
+              </h3>
+              <ul className="space-y-2">
+                {links.map((link) => (
+                  <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                      className="text-sm sm:text-base text-muted-foreground hover:text-indigo-400 transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -77,6 +76,27 @@ const Footer = () => {
               </ul>
             </div>
           ))}
+
+          {/* Social Links Section */}
+          <div>
+            <h3 className="text-base sm:text-lg font-semibold text-foreground mb-4">
+              Connect
+            </h3>
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-indigo-400 transition-colors duration-200"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -84,25 +104,25 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Aqsa Numan. All rights reserved.
+            <p className="text-sm sm:text-base text-muted-foreground">
+              © 2024 Aqsa Numan. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200"
+                className="text-gray-400 hover:text-indigo-400 text-sm transition-colors duration-200"
               >
                 Privacy Policy
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200"
+                className="text-gray-400 hover:text-indigo-400 text-sm transition-colors duration-200"
               >
                 Terms of Service
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-purple-400 text-sm transition-colors duration-200"
+                className="text-gray-400 hover:text-indigo-400 text-sm transition-colors duration-200"
               >
                 Cookie Policy
               </a>

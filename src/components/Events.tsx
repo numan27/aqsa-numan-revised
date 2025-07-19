@@ -27,15 +27,15 @@ const Events = () => {
   ];
 
   return (
-    <section id="events" className="py-20 bg-background">
+    <section id="events" className="py-8 sm:py-12 md:py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
             Upcoming Events
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join me at workshops, meetups, and speaking engagements designed to
-            inspire and empower the tech community.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Join me at upcoming events, workshops, and speaking engagements
+            where I share insights and connect with the community.
           </p>
         </div>
 
@@ -46,21 +46,21 @@ const Events = () => {
               className="animated-border rounded-2xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-lg text-sm font-medium border border-purple-500/30">
+                <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-lg text-sm font-medium border border-indigo-500/30">
                   {event.type}
                 </span>
                 <span className="text-sm text-muted-foreground">
                   {event.location}
                 </span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-purple-400 transition-colors">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-indigo-400 transition-colors">
                 {event.title}
               </h3>
-              <p className="text-purple-400 font-medium mb-3">{event.date}</p>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
+              <p className="text-indigo-400 font-medium mb-3">{event.date}</p>
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">
                 {event.description}
               </p>
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 glow-border">
+              <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-2 rounded-lg font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1">
                 Register Now
               </button>
             </div>
@@ -68,7 +68,7 @@ const Events = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="border-2 border-purple-600 text-purple-400 px-8 py-3 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-all duration-200">
+          <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-2 rounded-lg font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1">
             View All Events
           </button>
         </div>

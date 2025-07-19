@@ -28,14 +28,14 @@ const BackToTop = () => {
     <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
       {/* WhatsApp CTA */}
       <a
-        href="https://wa.me/your-number"
+        href="https://wa.me/923224902181"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 text-white p-3 rounded-lg shadow-lg hover:bg-green-600 transition-all duration-300 transform hover:scale-105"
+        className="bg-green-500 text-white w-10 h-10 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
         aria-label="Contact on WhatsApp"
       >
         <svg
-          className="w-5 h-5"
+          className="w-4 h-4"
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -48,10 +48,10 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="bg-purple-500 text-white p-3 rounded-lg shadow-lg hover:bg-purple-600 transition-all duration-300 transform hover:scale-105"
+          className="border-2 border-indigo-500 text-indigo-500 bg-transparent w-10 h-10 rounded-lg shadow-lg hover:bg-white hover:text-indigo-500 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
           aria-label="Back to top"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-4 h-4" />
         </button>
       )}
     </div>

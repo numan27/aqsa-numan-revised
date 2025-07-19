@@ -5,11 +5,10 @@ const AboutMe = () => {
     { number: "500+", label: "Designs Created" },
     { number: "50+", label: "Happy Clients" },
     { number: "5+", label: "Years Experience" },
-    { number: "3", label: "Beautiful Children" },
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-card">
+    <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-background to-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Image */}
@@ -37,29 +36,29 @@ const AboutMe = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-foreground mb-6">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6">
               About Me
             </h2>
-            <p className="text-base text-justify text-muted-foreground mb-5 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-justify text-muted-foreground mb-4 leading-relaxed">
               I'm Aqsa — a UI/UX designer, creative strategist, and tech
               community leader with 5+ years of experience crafting user-first
               digital experiences. I blend problem-solving with empathy and
               inclusive design.
             </p>
-            <p className="text-base text-justify text-muted-foreground mb-5 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-justify text-muted-foreground mb-4 leading-relaxed">
               As Country Manager Pakistan at IxDF (the biggest design
               community), I mentor designers and foster growth-focused
               communities.
             </p>
-            <p className="text-base text-justify text-muted-foreground mb-5 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-justify text-muted-foreground mb-4 leading-relaxed">
               Beyond design, I'm a proud mother of three — proving that
               leadership and motherhood can thrive together. I advocate for
               women to pursue both ambition and family without compromise.
             </p>
-            <p className="text-base text-justify text-muted-foreground mb-5 leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-justify text-muted-foreground mb-4 leading-relaxed">
               <strong>How I help others thrive in tech:</strong>
             </p>
-            <ul className="text-base text-justify text-muted-foreground mb-5 leading-relaxed space-y-2">
+            <ul className="text-xs sm:text-sm md:text-base text-justify text-muted-foreground mb-4 leading-relaxed space-y-2">
               <li>
                 • Connect talent with career support and job opportunities
               </li>
@@ -84,10 +83,10 @@ const AboutMe = () => {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="text-3xl font-bold text-pink-400 mb-2">
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold text-indigo-400 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -97,13 +96,13 @@ const AboutMe = () => {
             {/* <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="/portfolio"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1"
               >
                 View Portfolio
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-lg border-2 border-purple-500 text-purple-300 font-medium hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-2 rounded-lg border-2 border-indigo-500 text-indigo-300 font-medium hover:bg-indigo-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1"
               >
                 Get in Touch
               </a>

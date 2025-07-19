@@ -97,25 +97,27 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
+            className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
 
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-foreground mb-6 leading-tight">
               My Services
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Comprehensive design solutions tailored to your needs
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-12 leading-relaxed">
+              From strategic design consultation to community building and
+              career guidance, I offer comprehensive services to help you
+              achieve your goals in the tech industry.
             </p>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-background">
+      <section className="py-8 sm:py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12">
             {services.map((service, index) => (
@@ -137,22 +139,22 @@ const Services = () => {
                       </div>
                       <div>
                         <div className="flex items-center gap-3">
-                          <h3 className="text-3xl font-semibold text-foreground">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-foreground">
                             {service.title}
                           </h3>
                           {service.comingSoon && (
-                            <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-lg">
+                            <span className="px-3 py-1 text-sm bg-indigo-500/20 text-indigo-300 rounded-lg">
                               Coming Soon
                             </span>
                           )}
                         </div>
-                        <p className="text-muted-foreground mt-2">
+                        <span className="text-xs sm:text-sm md:text-base text-muted-foreground mt-2">
                           {service.price}
-                        </p>
+                        </span>
                       </div>
                     </div>
 
-                    <p className="text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
 
@@ -174,7 +176,7 @@ const Services = () => {
 
                     <Link
                       to={service.link}
-                      className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+                      className="inline-flex items-center justify-center px-8 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1"
                     >
                       Get Started
                       <ExternalLink className="w-4 h-4 ml-2" />
@@ -182,7 +184,7 @@ const Services = () => {
                   </div>
 
                   <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-background to-card p-8">
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-blue-500/10" />
                     <div className="relative h-full flex items-center justify-center">
                       <div className="grid grid-cols-2 gap-8">
                         {service.features.map((_, idx) => {
@@ -207,17 +209,18 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-card">
+      <section className="py-8 sm:py-12 md:py-16 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Let's work together to create something amazing.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-8">
+            Ready to take your design or career to the next level? Let's discuss
+            how I can help you achieve your goals.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-8 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1"
           >
             Contact Me
             <ExternalLink className="w-4 h-4 ml-2" />

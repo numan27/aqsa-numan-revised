@@ -119,19 +119,20 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
+            className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
 
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-foreground mb-6 leading-tight">
               My Portfolio
             </h1>
-            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              A collection of my recent work, showcasing my passion for creating
-              beautiful and functional user experiences.
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mb-12 leading-relaxed">
+              A curated collection of my design work, community projects, and
+              strategic initiatives that showcase my approach to creating
+              impactful digital experiences.
             </p>
           </div>
         </div>
@@ -142,7 +143,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Filter className="w-5 h-5 text-purple-400" />
+              <Filter className="w-5 h-5 text-indigo-400" />
               <span className="text-foreground font-medium">Filter by:</span>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -152,8 +153,8 @@ const Portfolio = () => {
                   onClick={() => setActiveFilter(filter.id)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     activeFilter === filter.id
-                      ? "bg-purple-500 text-white"
-                      : "bg-purple-500/20 text-purple-300 hover:bg-purple-500/30"
+                      ? "bg-indigo-500 text-white"
+                      : "bg-indigo-500/20 text-indigo-300 hover:bg-indigo-500/30"
                   }`}
                 >
                   {filter.label}
@@ -165,7 +166,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 bg-background">
+      <section className="py-8 sm:py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12">
             {filteredProjects.map((project, index) => (
@@ -194,11 +195,10 @@ const Portfolio = () => {
                       <span>{project.client}</span>
                     </div>
 
-                    <h3 className="text-3xl font-semibold text-foreground group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-indigo-400 transition-colors">
                       {project.title}
                     </h3>
-
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4">
                       {project.description}
                     </p>
 
@@ -206,7 +206,7 @@ const Portfolio = () => {
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-lg"
+                          className="px-3 py-1 text-sm bg-indigo-500/20 text-indigo-300 rounded-lg"
                         >
                           {tag}
                         </span>
@@ -218,7 +218,7 @@ const Portfolio = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                        className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live Demo
@@ -227,7 +227,7 @@ const Portfolio = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                        className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
                       >
                         <Github className="w-4 h-4 mr-2" />
                         Source Code
@@ -242,9 +242,9 @@ const Portfolio = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-card">
+      <section className="py-8 sm:py-12 md:py-16 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-3xl font-bold text-foreground mb-6">
             Ready to Start Your Project?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
@@ -252,7 +252,7 @@ const Portfolio = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-8 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1"
           >
             Get in Touch
             <ChevronRight className="w-4 h-4 ml-2" />

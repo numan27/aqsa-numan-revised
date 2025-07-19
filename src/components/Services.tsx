@@ -60,23 +60,23 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-8 sm:py-12 md:py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6"
           >
-            💼 Services
+            Services
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-muted-foreground"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground"
           >
             Here's how I help individuals, teams, and companies grow.
           </motion.p>
@@ -92,27 +92,30 @@ const Services = () => {
               transition={{ delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative z-10 bg-card rounded-2xl p-8 h-full flex flex-col">
-                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-6 group-hover:bg-gray-200 dark:group-hover:bg-gray-700 transition-colors">
-                  <service.icon className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+              <div className="relative z-10 animated-border rounded-2xl p-8 h-full flex flex-col">
+                <div className="w-10 h-10 rounded-lg border border-indigo-200 dark:border-indigo-700 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:from-indigo-50 group-hover:to-blue-50 dark:group-hover:from-indigo-900/20 dark:group-hover:to-blue-900/20 group-hover:border-indigo-300 dark:group-hover:border-indigo-600 group-hover:shadow-sm transition-all duration-300">
+                  <service.icon className="w-5 h-5 text-indigo-300 dark:text-indigo-500 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-all duration-300" />
                 </div>
 
                 <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-semibold text-foreground">
+                  <h3 className="text-xl font-semibold text-foreground group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-all duration-300">
                     {service.title}
                   </h3>
                 </div>
 
-                <p className="text-muted-foreground mb-6 flex-grow">
-                  {service.description}
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">
+                  Comprehensive design and strategic services to help you create
+                  impactful digital experiences and grow your business.
                 </p>
 
                 <Link
                   to={service.link}
-                  className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors group-hover:translate-x-1 duration-300"
+                  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm sm:text-base group"
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <span className="border-b border-indigo-400 group-hover:border-indigo-300 transition-colors">
+                    Learn More
+                  </span>
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
@@ -131,7 +134,7 @@ const Services = () => {
         >
           <Link
             to="/services"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-8 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1"
           >
             View All Services
             <ArrowRight className="w-4 h-4 ml-2" />

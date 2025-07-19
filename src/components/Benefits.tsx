@@ -50,16 +50,15 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-8 sm:py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            💡 Why Work With Me
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
+            Why Work With Me
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Choosing the right collaborator for your digital journey is
-            critical. Here's why professionals, startups, and tech leaders trust
-            me with their design and growth needs:
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            I bring a unique combination of design expertise, community
+            leadership, and strategic thinking to help you achieve your goals.
           </p>
         </div>
 
@@ -71,15 +70,15 @@ const Benefits = () => {
                 key={index}
                 className="animated-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-700 transition-colors">
-                    <IconComponent className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:space-x-4">
+                  <div className="w-10 h-10 border border-indigo-200 dark:border-indigo-700 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-br group-hover:from-indigo-50 group-hover:to-blue-50 dark:group-hover:from-indigo-900/20 dark:group-hover:to-blue-900/20 group-hover:border-indigo-300 dark:group-hover:border-indigo-600 group-hover:shadow-sm transition-all duration-300 self-start">
+                    <IconComponent className="w-5 h-5 text-indigo-300 dark:text-indigo-500 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-all duration-300" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-gray-400 dark:group-hover:text-white transition-colors">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-4 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-all duration-300">
                       {benefit.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
                       {benefit.description}
                     </p>
 

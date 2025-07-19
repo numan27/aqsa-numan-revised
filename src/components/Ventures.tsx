@@ -30,15 +30,15 @@ const Ventures = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-8 sm:py-12 md:py-16 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6">
-            Ventures I'm Building
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
+            Ventures & Initiatives
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
-            Innovative projects aimed at empowering the next generation of
-            designers and tech professionals.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+            Innovative projects and initiatives that create opportunities and
+            drive positive change in the tech ecosystem.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const Ventures = () => {
               key={index}
               className="animated-border rounded-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group flex flex-col h-full"
             >
-              <div className="h-48 bg-gradient-to-br from-purple-400 to-pink-400 relative overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-indigo-400 to-blue-400 relative overflow-hidden">
                 <img
                   src={`https://images.unsplash.com/${venture.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80`}
                   alt={venture.title}
@@ -56,16 +56,16 @@ const Ventures = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 <div className="absolute top-4 right-4">
-                  <span className="px-4 py-2 bg-purple-500/30 text-purple-200 rounded-lg text-base font-medium border border-purple-500/50 shadow-lg backdrop-blur-sm">
+                  <span className="px-4 py-2 bg-indigo-500/30 text-indigo-200 rounded-lg text-base font-medium border border-indigo-500/50 shadow-lg backdrop-blur-sm">
                     {venture.status}
                   </span>
                 </div>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-normal text-foreground mb-3 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2 group-hover:text-indigo-400 transition-colors">
                   {venture.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed font-light mb-6 flex-grow">
+                <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4">
                   {venture.description}
                 </p>
                 <a
@@ -74,7 +74,7 @@ const Ventures = () => {
                   rel={
                     venture.link.startsWith("http") ? "noopener noreferrer" : ""
                   }
-                  className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl mt-auto"
+                  className="inline-flex items-center justify-center w-full px-6 py-2 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
                 >
                   {venture.ctaText}
                   {venture.link.startsWith("http") && (

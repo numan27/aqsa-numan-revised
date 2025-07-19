@@ -24,15 +24,15 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-20 bg-muted/20">
+    <section className="py-8 sm:py-12 md:py-16 bg-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-foreground mb-6">
             Gallery
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of moments, projects, and experiences from my journey
-            in design and technology.
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
+            A visual journey through my design work, community events, and
+            moments that define my professional path.
           </p>
         </div>
 
@@ -155,24 +155,6 @@ const Gallery = () => {
           {/* Gradient overlays for smooth fade effect */}
           <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-muted/20 to-transparent pointer-events-none" />
           <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-muted/20 to-transparent pointer-events-none" />
-        </div>
-
-        {/* Gallery Stats */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-foreground mb-2">40+</div>
-              <div className="text-muted-foreground">Images</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-foreground mb-2">4</div>
-              <div className="text-muted-foreground">Columns</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-foreground mb-2">∞</div>
-              <div className="text-muted-foreground">Continuous Loop</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
